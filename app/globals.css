@@ -1,32 +1,5 @@
+/* الوضع الغامق هو الافتراضي. الفاتح يتفعّل فقط بـ data-theme="light". */
 :root {
-  --bg: #f7f7f5;
-  --card: #ffffff;
-  --text: #1a1a1a;
-  --muted: #5b5b5b;
-  --accent: #0f5132;
-  --accent-text: #ffffff;
-  --border: #e3e3df;
-  --warn: #8a5a00;
-  --warn-bg: #fff6e0;
-  --error: #b00020;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #121412;
-    --card: #1d211e;
-    --text: #eef1ee;
-    --muted: #a9b1aa;
-    --accent: #2f8f63;
-    --accent-text: #ffffff;
-    --border: #2d332f;
-    --warn: #f0b35a;
-    --warn-bg: #2a2416;
-    --error: #ff8a8a;
-  }
-}
-
-:root[data-theme="dark"] {
   --bg: #121412;
   --card: #1d211e;
   --text: #eef1ee;
@@ -37,6 +10,21 @@
   --warn: #f0b35a;
   --warn-bg: #2a2416;
   --error: #ff8a8a;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f7f5;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5b5b5b;
+  --accent: #0f5132;
+  --accent-text: #ffffff;
+  --border: #e3e3df;
+  --warn: #8a5a00;
+  --warn-bg: #fff6e0;
+  --error: #b00020;
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
