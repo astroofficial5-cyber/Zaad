@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // قارئ نص القرآن (الرسم العثماني، رواية حفص) من ملف Tanzil.
 // النص يُعرض كما هو بدون أي تعديل. الملف يُحمَّل أول ما يُفتح التبويب.
@@ -18,6 +18,7 @@ function toArabicDigits(n: number): string {
 // مفاتيح التخزين المحلي، ومعظمها اختياري: لو التخزين مش متاح، القارئ بيشتغل عادي.
 const FONT_KEY = "zaad:quran:font";
 const LAST_KEY = "zaad:quran:last";
+const LAST_AYA_KEY = "zaad:quran:lastaya"; // بصيغة "سورة:آية"
 const FONT_MIN = 1.0;
 const FONT_MAX = 2.2;
 const FONT_STEP = 0.15;
@@ -56,13 +57,60 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
   const [query, setQuery] = useState("");
   const [fontSize, setFontSize] = useState<number>(FONT_DEFAULT);
   const [lastSura, setLastSura] = useState<number | null>(null);
+  const [lastAya, setLastAya] = useState<{ sura: number; aya: number } | null>(null);
+  // الآية اللي المستخدم هيرجع لها بعد "متابعة": بتتطبق بعد ما السورة تتعرض
+  const pendingScroll = useRef<{ sura: number; aya: number } | null>(null);
 
   useEffect(() => {
     const f = Number(readStored(FONT_KEY));
     if (f >= FONT_MIN && f <= FONT_MAX) setFontSize(f);
     const l = Number(readStored(LAST_KEY));
     if (Number.isInteger(l) && l >= 1 && l <= 114) setLastSura(l);
+    const la = /^(\d+):(\d+)$/.exec(readStored(LAST_AYA_KEY) || "");
+    if (la) setLastAya({ sura: Number(la[1]), aya: Number(la[2]) });
   }, []);
+
+  // حفظ آخر آية ظاهرة أثناء القراءة، وإرجاع المستخدم لها عند "متابعة"
+  useEffect(() => {
+    if (openSura === null || typeof window === "undefined") return;
+    const pending = pendingScroll.current;
+    if (pending && pending.sura === openSura) {
+      const el = document.querySelector(`[data-aya="${pending.aya}"]`);
+      if (el) (el as HTMLElement).scrollIntoView({ block: "start" });
+      pendingScroll.current = null;
+    }
+    let timer: number | null = null;
+    const save = () => {
+      timer = null;
+      const nodes = document.querySelectorAll<HTMLElement>(`[data-sura="${openSura}"][data-aya]`);
+      let found: number | null = null;
+      nodes.forEach((el) => {
+        if (el.getBoundingClientRect().top <= 140) found = Number(el.dataset.aya);
+      });
+      if (found !== null) {
+        const value = { sura: openSura, aya: found };
+        setLastAya(value);
+        writeStored(LAST_AYA_KEY, `${openSura}:${found}`);
+      }
+    };
+    const onScroll = () => {
+      if (timer === null) timer = window.setTimeout(save, 300);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (timer !== null) window.clearTimeout(timer);
+    };
+  }, [openSura]);
+
+  function continueReading() {
+    if (lastAya) {
+      pendingScroll.current = lastAya;
+      openSuraAt(lastAya.sura);
+    } else if (lastSura !== null) {
+      openSuraAt(lastSura);
+    }
+  }
 
   function changeFont(delta: number) {
     setFontSize((prev) => {
@@ -158,7 +206,7 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
           )}
           <div className="card quran-text quran-verses" style={{ lineHeight: 2.4, fontSize: `${fontSize}rem` }}>
             {sura.ayas.map((a) => (
-              <span key={a.n} className="quran-aya">
+              <span key={a.n} className="quran-aya" data-sura={sura.n} data-aya={a.n}>
                 {a.text}
                 <span className="quran-num" aria-hidden="true"> ﴿{toArabicDigits(a.n)}﴾ </span>
               </span>
@@ -172,10 +220,11 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
             <button
               type="button"
               className="full"
-              onClick={() => openSuraAt(lastSura)}
+              onClick={continueReading}
               style={{ marginBottom: 10 }}
             >
-              متابعة من آخر سورة: {data.suras[lastSura - 1]?.name}
+              متابعة من آخر موضع: سورة {data.suras[(lastAya ? lastAya.sura : lastSura) - 1]?.name}
+              {lastAya ? ` (آية ${toArabicDigits(lastAya.aya)})` : ""}
             </button>
           )}
           <input

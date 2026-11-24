@@ -18,6 +18,9 @@ export default function QiblaTab({
   const [attempt, setAttempt] = useState(0);
   // حالة مستشعر الاتجاه (البوصلة): الشاشة بتعرض رسالة إرشادية حسب الحالة
   const [sensor, setSensor] = useState<"checking" | "unsupported" | "no-reading" | "ok">("checking");
+  // اتجاه الجهاز (من الشمال) والبوصلة الحية: السهم بيلف مع الجهاز بعد ما المستخدم يفعّلها
+  const [heading, setHeading] = useState<number | null>(null);
+  const [compassOn, setCompassOn] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined" || !("DeviceOrientationEvent" in window)) {
@@ -30,6 +33,9 @@ export default function QiblaTab({
       if (ev.alpha !== null && ev.alpha !== undefined) {
         got = true;
         setSensor("ok");
+        // alpha بيتعد عكس عقارب الساعة، فالاتجاه من الشمال = 360 - alpha
+        const h = (360 - ev.alpha) % 360;
+        setHeading((prev) => (prev === null || Math.abs(prev - h) >= 1 ? h : prev));
       }
     };
     window.addEventListener("deviceorientationabsolute", onOrientation);
@@ -44,6 +50,23 @@ export default function QiblaTab({
       window.clearTimeout(timer);
     };
   }, []);
+
+  // تفعيل البوصلة لازم يكون بضغطة من المستخدم (iOS بيطلب إذن الحركة والاتجاه)
+  async function enableCompass() {
+    try {
+      const DOE = (window as any).DeviceOrientationEvent;
+      if (DOE && typeof DOE.requestPermission === "function") {
+        const res = await DOE.requestPermission();
+        if (res !== "granted") {
+          setCompassOn(false);
+          return;
+        }
+      }
+      setCompassOn(true);
+    } catch {
+      setCompassOn(false);
+    }
+  }
 
   const lat = place?.lat;
   const lon = place?.lon;
@@ -97,7 +120,11 @@ export default function QiblaTab({
           <p className="muted" style={{ margin: "0 0 8px" }}>القبلة من {place.name}</p>
           <div
             aria-label={`السهم يشير إلى ${state.direction.toFixed(1)} درجة من الشمال`}
-            style={{ fontSize: 72, transform: `rotate(${state.direction}deg)`, transition: "transform .3s" }}
+            style={{
+              fontSize: 72,
+              transform: `rotate(${compassOn && heading !== null ? state.direction - heading : state.direction}deg)`,
+              transition: "transform .3s",
+            }}
           >
             ↑
           </div>
@@ -105,6 +132,17 @@ export default function QiblaTab({
           <p className="warn">
             السهم بيوضح اتجاه القبلة بالنسبة للشمال فقط. الشاشة مش بتقرأ البوصلة، فلازم تحدد الشمال بنفسك أو بتطبيق بوصلة.
           </p>
+          {sensor !== "unsupported" && (
+            <p style={{ margin: "8px 0" }}>
+              {compassOn && heading !== null ? (
+                <span className="muted">البوصلة شغالة: السهم بيلف مع الجهاز.</span>
+              ) : (
+                <button className="primary" onClick={enableCompass}>
+                  تفعيل البوصلة (السهم يلف مع الجهاز)
+                </button>
+              )}
+            </p>
+          )}
           {sensor === "unsupported" && (
             <p className="muted">
               متصفحك ما بيدعمش مستشعر الاتجاه. استخدم بوصلة الجهاز أو تطبيق بوصلة لتحديد الشمال.
