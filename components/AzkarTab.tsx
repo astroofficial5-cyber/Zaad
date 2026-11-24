@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AZKAR_SECTIONS, SECTION_SOURCES } from "../lib/azkarData.js";
 import { getAzkarState } from "../lib/approvedContent.js";
 import AzkarCandidates, { CANDIDATES_ENABLED, CANDIDATES_TAB_LABEL } from "./AzkarCandidatesRuntime";
@@ -95,6 +95,11 @@ function AzkarItem({ itemId }: { itemId: string }) {
     }
   }, [itemId, approved]);
 
+  // التصفير بالضغط المطوّل (ثانية) عشان ما يحصلش بالخطأ.
+  // الـhooks لازم تتعرّف قبل أي return شرطي.
+  const resetTimer = useRef<number | null>(null);
+  const [resetHint, setResetHint] = useState(false);
+
   if (!approved) return null;
 
   const bump = () => {
@@ -105,6 +110,14 @@ function AzkarItem({ itemId }: { itemId: string }) {
     } catch {
       // التخزين مش متاح؛ العداد بيفضل شغال لحد ما الصفحة تتقفل
     }
+    // اهتزاز خفيف عند كل ضغطة، واهتزاز مميز عند الاكتمال (لو الجهاز بيدعمه)
+    try {
+      if (typeof navigator !== "undefined" && typeof navigator.vibrate === "function") {
+        navigator.vibrate(next >= state.count ? [60, 40, 60] : 15);
+      }
+    } catch {
+      /* الاهتزاز مش مدعوم */
+    }
   };
 
   const reset = () => {
@@ -114,6 +127,19 @@ function AzkarItem({ itemId }: { itemId: string }) {
     } catch {
       // مفيش تخزين متاح
     }
+  };
+
+  const startLongPress = () => {
+    if (resetTimer.current) window.clearTimeout(resetTimer.current);
+    resetTimer.current = window.setTimeout(() => {
+      reset();
+      resetTimer.current = null;
+      setResetHint(false);
+    }, 1000);
+  };
+  const cancelLongPress = () => {
+    if (resetTimer.current) window.clearTimeout(resetTimer.current);
+    resetTimer.current = null;
   };
 
   return (
@@ -133,12 +159,26 @@ function AzkarItem({ itemId }: { itemId: string }) {
           </>
         )}
       </p>
-      <div className="counter-row">
-        <button className="primary" onClick={bump} disabled={count >= state.count}>
-          {count >= state.count ? `تم (${count} من ${state.count})` : `عدّ (${count} من ${state.count})`}
+      <div className="counter-row" style={{ flexDirection: "column", gap: 8 }}>
+        <button
+          className="primary"
+          onClick={bump}
+          disabled={count >= state.count}
+          aria-label={count >= state.count ? `تم، ${count} من ${state.count}` : `عدّ، ${count} من ${state.count}`}
+          style={{ width: "100%", minHeight: 96, fontSize: "1.5rem", fontWeight: 700 }}
+        >
+          {count >= state.count ? `تم (${count} من ${state.count})` : `${count} / ${state.count}`}
         </button>
-        <button className="ghost" onClick={reset}>
-          إعادة
+        <button
+          className="ghost"
+          onPointerDown={startLongPress}
+          onPointerUp={cancelLongPress}
+          onPointerLeave={cancelLongPress}
+          onPointerCancel={cancelLongPress}
+          onClick={() => setResetHint(true)}
+          style={{ width: "100%", minHeight: 44 }}
+        >
+          {resetHint ? "اضغط مطولاً لثانية للتصفير" : "إعادة (اضغط مطولاً)"}
         </button>
       </div>
     </div>
