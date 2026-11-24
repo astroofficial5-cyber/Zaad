@@ -72,7 +72,7 @@ export default function AzkarTab({ hidden }: { hidden: boolean }) {
               <a href={source.url} target="_blank" rel="noopener noreferrer">
                 فتح الصفحة الأصلية
               </a>
-              <p className="muted">المؤلف: سعيد بن علي بن وهف القحطاني. المرجع هو الكتاب، والنسخة الرقمية من رسالة الحرمين. نسخة مراجعة محلية غير منشورة.</p>
+              <p className="muted">المؤلف: سعيد بن علي بن وهف القحطاني. المرجع هو الكتاب، والنسخة الرقمية من رسالة الحرمين.</p>
             </details>
           )}
         </>
