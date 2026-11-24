@@ -1,0 +1,159 @@
+{
+  "policy": "لا يُعرض أي نص ديني إلا إذا اتنقل من أصل فعلي مفتوح على مصدر متحقق منه، ومعه سجل في content/records، ومراجعة مسجلة في content/review-log.json. ولا يُفترض ترخيص إعادة الاستخدام.",
+  "domainStatusMeaning": {
+    "verified-by-fetch": "النطاق اتحقق منه بفتح صفحة فعلية من النطاق، والدليل مسجل في evidence",
+    "candidate-not-fetched": "ظهر في نتائج بحث لكن ما اتفتحش أي صفحة منه، ولا يُقبل",
+    "not-checked": "لم يُتحقق منه بعد"
+  },
+  "approvedSources": [
+    {
+      "id": "qurancomplex",
+      "name": "مجمع الملك فهد لطباعة المصحف الشريف",
+      "kind": "quran",
+      "domain": "qurancomplex.gov.sa",
+      "domainStatus": "verified-by-fetch",
+      "evidence": [
+        {
+          "url": "https://qurancomplex.gov.sa/",
+          "fetchedAt": "2026-11-23",
+          "pageTitle": "مجمع الملك فهد لطباعة المصحف الشريف",
+          "note": "الموقع الرسمي للمجمع، وفيه حقوق محفوظة للمجمع"
+        },
+        {
+          "url": "https://qurancomplex.gov.sa/mushaf-printing",
+          "fetchedAt": "2026-11-23",
+          "note": "صفحة النسخة الرقمية. النسخة المعروضة ملف مضغوط (ZIP) بصيغة vector لاستخدامات الطباعة والبرامج، وليس نص قرآن قابل للاستخراج المباشر"
+        },
+        {
+          "url": "https://qurancomplex.gov.sa/mushaf-printing",
+          "fetchedAt": "2026-11-23",
+          "pageTitle": "نسخة رقمية من مصحف المدينة المنورة",
+          "note": "قسم حقوق الاستخدام اتقرأ بالجلب، والتحقق من بصمة الأرشيف SHA-256 والـ604 صفحة تم من المستخدم وما اتحققش منه في هذه البيئة."
+        }
+      ],
+      "rightsStatus": "page-permits-websites-and-software",
+      "rightsNote": "صفحة حقوق الاستخدام في mushaf-printing (فُحصت بالجلب في 2026-11-23): تسمح باستخدام النسخة الرقمية مجاناً في المجالات الشخصية والأعمال الفردية والجهات الحكومية والخاصة والأهلية، ومواقع الإنترنت والبرامج الحاسوبية، مع إخلاء المسؤولية عن الأخطاء الفنية والبرمجية. الصفحة لا تنص صراحة على إعادة توزيع ملفات النسخة نفسها، ومنع طباعة المصاحف داخل المملكة في غير المجمع قائم ولا ينطبق على عرض الصور في الموقع. التطبيق بيعرض صور الصفحات بس.",
+      "fetched": true
+    },
+    {
+      "id": "dorar",
+      "name": "الدرر السنية",
+      "kind": "hadith",
+      "domain": null,
+      "domainStatus": "candidate-not-fetched",
+      "candidateDomain": "dorar.net",
+      "attempts": [
+        {
+          "url": "https://dorar.net/hadith/sharh/39884",
+          "result": "client_error",
+          "fetchedAt": "2026-11-23"
+        },
+        {
+          "url": "https://dorar.net/article/353",
+          "result": "client_error",
+          "fetchedAt": "2026-11-23"
+        },
+        {
+          "url": "https://dorar.net/",
+          "result": "URL_NOT_ON_ALLOWLIST (لم يُجلب)",
+          "fetchedAt": "2026-11-23"
+        }
+      ],
+      "fetched": false
+    },
+    {
+      "id": "mushaf-madinah",
+      "name": "تطبيق مصحف المدينة",
+      "kind": "quran",
+      "domain": null,
+      "domainStatus": "not-checked",
+      "fetched": false
+    },
+    {
+      "id": "islamweb",
+      "name": "إسلام ويب",
+      "kind": "any",
+      "domain": null,
+      "domainStatus": "not-checked",
+      "fetched": false
+    },
+    {
+      "id": "islamqa",
+      "name": "إسلام سؤال وجواب",
+      "kind": "any",
+      "domain": null,
+      "domainStatus": "not-checked",
+      "fetched": false
+    },
+    {
+      "id": "ibn-baz",
+      "name": "الموقع الرسمي للشيخ ابن باز",
+      "kind": "any",
+      "domain": "binbaz.org.sa",
+      "domainStatus": "verified-by-fetch",
+      "evidence": [
+        {
+          "url": "https://binbaz.org.sa/fatwas/17728/الاذكار-الواردة-بعد-الصلاة",
+          "fetchedAt": "2026-11-23",
+          "pageTitle": "الأذكار الواردة بعد الصلاة",
+          "note": "فتوى رقم 17728 ضمن مجموعة نور على الدرب. الأداة لخصت الصفحة ولم تعطِ نصاً حرفياً، والصفحة نفسها مفرغة من تسجيل صوتي فيها فجوات."
+        }
+      ],
+      "rightsStatus": "attributed-text-reuse-permitted",
+      "rightsNote": "تذييل الصفحة يتيح النقل لكل مسلم بشرط ذكر المصدر. الإذن هنا للنصوص المنقولة فقط، ولا يشمل الصوت أو العلامة.",
+      "fetched": true
+    },
+    {
+      "id": "bukhari",
+      "name": "صحيح البخاري",
+      "kind": "hadith",
+      "domain": null,
+      "domainStatus": "not-checked",
+      "fetched": false
+    },
+    {
+      "id": "muslim",
+      "name": "صحيح مسلم",
+      "kind": "hadith",
+      "domain": null,
+      "domainStatus": "not-checked",
+      "fetched": false
+    },
+    {
+      "id": "gov-quran-pages",
+      "name": "الصفحات الرسمية للجهات الحكومية والأزهر ودار الإفتاء المصرية",
+      "kind": "quran",
+      "domain": null,
+      "domainStatus": "not-checked",
+      "fetched": false
+    },
+    {
+      "id": "hisn-risala",
+      "name": "حصن المسلم، سعيد بن علي بن وهف القحطاني، نسخة رسالة الحرمين",
+      "kind": "dhikr",
+      "domain": "risala.prh.gov.sa",
+      "domainStatus": "verified-by-fetch",
+      "fetched": true,
+      "rightsStatus": "public-reuse-unresolved-private-review-only",
+      "rightsNote": "نسخة الكتاب متاحة للقراءة والتنزيل. لم يثبت ترخيص عام لإعادة نشر نسخة رقمية مقتطفة. هذه نسخة مراجعة محلية غير منشورة؛ لا تمثل مراجعة الحقوق تصريحا بالنشر.",
+      "evidence": [
+        {
+          "url": "https://risala.prh.gov.sa/ar/content/51",
+          "fetchedAt": "2026-11-23",
+          "note": "نص الكتاب وملف PDF مفتوحان. طوبقت النصوص المختارة على صفحات الملف."
+        },
+        {
+          "url": "https://prh.gov.sa/ar/terms-of-use",
+          "fetchedAt": "2026-11-23",
+          "note": "تحفظ حقوق المحتوى وتسمح بالربط دون إيهام برعاية رسمية. لا تمنح ترخيص إعادة توزيع عام."
+        }
+      ]
+    }
+  ],
+  "notApproved": [
+    {
+      "name": "alquran.cloud",
+      "reason": "غير معتمد، تم حذف الاستخدام منه"
+    }
+  ]
+}

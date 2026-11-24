@@ -1,0 +1,14 @@
+{
+  "reviewedAt": "2026-11-23T11:57:34Z",
+  "reviewer": "independent-source-review",
+  "scope": "primary-citation-display-only",
+  "result": "substantive-mapping-passed",
+  "constraints": [
+    "Muslim591 istighfar wording is narrator explanation.",
+    "Muslim592 IbnNumair vocative variant.",
+    "Bukhari6473 supplies count3; Muslim593 continuation has no count.",
+    "Al-Adab Al-Mufrad is not Sahih al-Bukhari.",
+    "No new blanket grading labels.",
+    "Text and counts unchanged from reviewed Hisn selection."
+  ]
+}

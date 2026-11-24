@@ -1,0 +1,13 @@
+{
+  "name": "زاد، الصلاة والقرآن والأذكار",
+  "short_name": "زاد",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f5",
+  "theme_color": "#0f5132",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

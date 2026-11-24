@@ -1,0 +1,79 @@
+{
+  "ap-1": {
+    "label": "صحيح مسلم، 591",
+    "url": "https://sunnah.com/muslim:591",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": "تكرار الاستغفار ثلاثا صريح في التقرير، ولفظ أستغفر الله في شرح الأوزاعي داخل الرواية."
+  },
+  "ap-2": {
+    "label": "صحيح مسلم، 592، رواية ابن نمير",
+    "url": "https://sunnah.com/muslim:592a",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": "مسلم591 لسياق ما بعد الاستغفار،592a يثبت صيغة النداء في رواية ابن نمير."
+  },
+  "ap-3": {
+    "label": "صحيح البخاري، 6473 (ثلاث مرات)",
+    "url": "https://sunnah.com/bukhari:6473",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": "العدد3 في العربية في البخاري6473؛ المسلم593a للسياق المتصل بالدعاء التالي."
+  },
+  "ap-5": {
+    "label": "صحيح مسلم، 593",
+    "url": "https://sunnah.com/muslim:593a",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": ""
+  },
+  "ap-4": {
+    "label": "صحيح مسلم، 594",
+    "url": "https://sunnah.com/muslim:594a",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": ""
+  },
+  "m-2": {
+    "label": "الأدب المفرد للبخاري، 1199",
+    "url": "https://sunnah.com/adab:1199",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": "هذا الأدب المفرد وليس صحيح البخاري. الصيغتان مطابقتان للنص المقروء؛ نسخة الترمذي3391 المقروءة تختلف في الكلمة الأخيرة."
+  },
+  "e-2": {
+    "label": "الأدب المفرد للبخاري، 1199",
+    "url": "https://sunnah.com/adab:1199",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": "هذا الأدب المفرد وليس صحيح البخاري. الصيغتان مطابقتان للنص المقروء؛ نسخة الترمذي3391 المقروءة تختلف في الكلمة الأخيرة."
+  },
+  "m-3": {
+    "label": "جامع الترمذي، 3388",
+    "url": "https://sunnah.com/tirmidhi:3388",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": ""
+  },
+  "e-3": {
+    "label": "جامع الترمذي، 3388",
+    "url": "https://sunnah.com/tirmidhi:3388",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": ""
+  },
+  "m-1": {
+    "label": "صحيح مسلم، 2692",
+    "url": "https://sunnah.com/muslim:2692",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": ""
+  },
+  "e-1": {
+    "label": "صحيح مسلم، 2692",
+    "url": "https://sunnah.com/muslim:2692",
+    "verification": "read-full-arabic-primary-book-report-online",
+    "verifiedAt": "2026-11-23T11:54:44Z",
+    "note": ""
+  }
+}

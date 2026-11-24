@@ -1,0 +1,174 @@
+:root {
+  --bg: #f7f7f5;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5b5b5b;
+  --accent: #0f5132;
+  --accent-text: #ffffff;
+  --border: #e3e3df;
+  --warn: #8a5a00;
+  --warn-bg: #fff6e0;
+  --error: #b00020;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121412;
+    --card: #1d211e;
+    --text: #eef1ee;
+    --muted: #a9b1aa;
+    --accent: #2f8f63;
+    --accent-text: #ffffff;
+    --border: #2d332f;
+    --warn: #f0b35a;
+    --warn-bg: #2a2416;
+    --error: #ff8a8a;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #121412;
+  --card: #1d211e;
+  --text: #eef1ee;
+  --muted: #a9b1aa;
+  --accent: #2f8f63;
+  --accent-text: #ffffff;
+  --border: #2d332f;
+  --warn: #f0b35a;
+  --warn-bg: #2a2416;
+  --error: #ff8a8a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Tahoma, "Noto Naskh Arabic", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.app { max-width: 720px; margin: 0 auto; padding: 12px; }
+
+.nav {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  padding: 8px 0;
+  z-index: 1;
+}
+.tab, .chip {
+  flex: 1;
+  min-width: max-content;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+.tab.active, .chip.active { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+
+.nav-sub { display: flex; gap: 6px; overflow-x: auto; margin-bottom: 12px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.card h2 { font-size: 17px; margin: 0 0 10px; }
+.hero { background: var(--accent); color: var(--accent-text); text-align: center; border-color: var(--accent); }
+.warn-box { background: var(--warn-bg); border-color: var(--warn); }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.row:last-child { border-bottom: 0; }
+
+.muted { color: var(--muted); font-size: 14px; }
+.warn { color: var(--warn); font-size: 14px; }
+.error { color: var(--error); }
+
+button.primary, .btn-like {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-text);
+  cursor: pointer;
+  font: inherit;
+}
+button.primary:disabled { opacity: 0.5; cursor: not-allowed; }
+button.ghost {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+
+select, input[type="number"], input[type="text"], input:not([type]) {
+  font: inherit;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+.full { width: 100%; }
+
+.counter-row { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
+.counter-row select { flex: 1; }
+
+.brand { display: flex; align-items: center; gap: 12px; padding: 12px 4px 4px; }
+.brand h1 { font-size: 20px; margin: 0; }
+.brand-mark {
+  width: 44px; height: 44px; border-radius: 12px; background: var(--accent); color: var(--accent-text);
+  display: flex; align-items: center; justify-content: center; font-size: 18px; flex: none;
+}
+
+.place-line { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+.privacy { border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin-top: 12px; background: var(--bg); }
+
+.field { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.field label { font-size: 14px; color: var(--muted); }
+.field input, .field select { width: 100%; }
+
+.card a { color: var(--accent); }
+
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: 2px;
+}
+.ayah-text { font-size: 22px; line-height: 2; margin: 0 0 8px; }
+
+@media (min-width: 900px) {
+  .app { padding: 24px; }
+}
+
+.quran-frame { overflow: auto; max-height: 75vh; text-align: center; padding: 8px; }
+.quran-frame img { display: block; height: auto; margin: 0 auto; background: #ffffff; border-radius: 6px; max-width: none; }
+
+.source-note summary { cursor: pointer; font-size: 14px; color: var(--muted); }
+.source-note a { color: var(--accent); }
+
+@media (max-width: 480px) {
+ .nav, .nav-sub { flex-wrap: wrap; overflow-x: visible; }
+ .tab { min-width: 0; flex: 1 1 28%; }
+ .chip { min-width: 0; flex: 1 1 28%; padding: 9px 6px; }
+}

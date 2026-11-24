@@ -1,0 +1,2150 @@
+{
+  "schemaVersion": 6,
+  "status": "candidate-not-enabled",
+  "enabled": false,
+  "scope": "chapters 25 and 27 only; chapter 26 (دعاء صلاة الاستخارة) excluded; no text added from memory",
+  "source": {
+    "file": "hisn-risala.pdf",
+    "fileSha256": "2cf50bfa08f476509668c5b801d9f1d5f3aa247291555e3a1bfcf25861ecf62e",
+    "sourceZipSha256": "b2d89c62e75912bdb0ddeb376bfd78c8a53c147624001d196596d35170fd5e72",
+    "pdfPages": 115,
+    "pageOffset": "printed page = PDF page − 2 (verified on every page in range via the printed digit)"
+  },
+  "method": "Each page rendered to PNG (150 dpi; crop 300 dpi for one ambiguous block) and read visually. The PDF text layer is reversed and garbled for Arabic, so it was not used as evidence. Arabic in arabicReadFromRender is a visual transcription, not a machine match against a verified text.",
+  "chapters": [
+    {
+      "chapter": 25,
+      "title": "الأذكار بعد السلام من الصلاة",
+      "pdfPages": "32–35",
+      "printedPages": "30–33",
+      "items": 11
+    },
+    {
+      "chapter": 27,
+      "title": "أذكار الصباح والمساء",
+      "pdfPages": "37–47",
+      "printedPages": "35–45",
+      "items": 33
+    }
+  ],
+  "pagesCovered": {
+    "pdf": "32–35 and 37–47 (15 pages)",
+    "printed": "30–33 and 35–45"
+  },
+  "itemTotal": 44,
+  "legacyIdMap": {
+    "ap-6": "hisn-b25-011",
+    "m-4": "hisn-b27-020",
+    "e-4": "hisn-b27-025"
+  },
+  "remaining": [
+    "Muslim 597a verbatim Arabic (only summary fetched)",
+    "Bukhari 844 and Nasa'i Amal, Ibn al-Sunni, Ibn Hibban, Tabarani, Hakim, Ahmad not checked online",
+    "Quran Mushaf merge (2:255, 112, 113, 114) not started; no Quran text in this file",
+    "Reviewer identity and rights basis per item not assessed; no approval recorded",
+    "Abu Dawud 1531 (b27-020) and 5075 (b27-013/014) numbering: kept as printed with mismatch note",
+    "Publishing: not done; enabled=false everywhere"
+  ],
+  "items": [
+    {
+      "id": "hisn-b25-001",
+      "chapter": 25,
+      "pdfPage": 32,
+      "printedPage": 30,
+      "timeCondition": "after-prayer",
+      "count": 3,
+      "countNote": "printed as (ثلاثاً) on this phrase",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 32,
+          "quote": null,
+          "applicability": "block end, shared with hisn-b25-002",
+          "verdict": "block-level",
+          "printedCitation": "مسلم (1/414) برقم 591",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "أَسْتَغْفِرُ اللهَ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 591 (Thawban)",
+          "url": "https://sunnah.com/muslim:591",
+          "finding": "3x istighfar then اللهم أنت السلام…"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b25-002",
+      "chapter": 25,
+      "pdfPage": 32,
+      "printedPage": 30,
+      "timeCondition": "after-prayer",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "same block as hisn-b25-001; footnote 3 sits at block end",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 32,
+          "quote": null,
+          "applicability": "block end, shared with hisn-b25-001",
+          "verdict": "block-level",
+          "printedCitation": "مسلم (1/414) برقم 591",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ أَنْتَ السَّلَامُ، وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الجَلَالِ وَالإِكْرَامِ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 591",
+          "url": "https://sunnah.com/muslim:591",
+          "finding": "same hadith, text matches"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b25-003",
+      "chapter": 25,
+      "pdfPage": 33,
+      "printedPage": 31,
+      "timeCondition": "after-prayer",
+      "count": null,
+      "countNote": "see segments",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "resolved-by-independent-review"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "count is editorial, not the book's own printed count",
+      "segments": [
+        {
+          "segment": "a",
+          "text": "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ، وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+          "count": 3,
+          "countScope": "first sentence only, the bracketed [ثلاثاً] printed before اللَّهُمَّ لَا مَانِعَ; bracket is an editorial addition per footnote 1"
+        },
+        {
+          "segment": "b",
+          "text": "اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الجَدِّ مِنْكَ الجَدُّ",
+          "count": null,
+          "countScope": "no count printed for this segment"
+        }
+      ],
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 33,
+          "quote": null,
+          "applicability": "block 1 end; bracket is an addition per this footnote",
+          "verdict": "marker-position",
+          "printedCitation": "البخاري (1/255) برقم 844؛ مسلم (1/414) برقم 593؛ زيادة من البخاري برقم 6473 للمعقوفين",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 593a (Mughira)",
+          "url": "https://sunnah.com/muslim:593a",
+          "finding": "tahlil + اللهم لا مانع… after salam; no count in Muslim"
+        },
+        {
+          "ref": "Sahih al-Bukhari 6473",
+          "url": "https://sunnah.com/bukhari:6473",
+          "finding": "tahlil said ثلاث مرات at end of prayer; the اللهم لا مانع continuation is not in 6473"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b25-004",
+      "chapter": 25,
+      "pdfPage": 33,
+      "printedPage": 31,
+      "timeCondition": "after-prayer",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "resolved-by-independent-review"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "block boundary with hisn-b25-005 to be re-read at 300 dpi",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 33,
+          "quote": null,
+          "applicability": "block 2 end",
+          "verdict": "marker-position",
+          "printedCitation": "مسلم (1/415) برقم 594",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ، وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ، لَا إِلَهَ إِلَّا اللهُ، وَلَا نَعْبُدُ إِلَّا إِيَّاهُ، لَهُ النِّعْمَةُ وَلَهُ الفَضْلُ وَلَهُ الثَّنَاءُ الحَسَنُ، لَا إِلَهَ إِلَّا اللهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الكَافِرُونَ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 594a (Ibn al-Zubayr)",
+          "url": "https://sunnah.com/muslim:594",
+          "finding": "text matches; narrator says it was said at end of every prayer after salam; narration is Ibn al-Zubayr's practice with Prophet's practice reported"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b25-005",
+      "chapter": 25,
+      "pdfPage": 33,
+      "printedPage": 31,
+      "timeCondition": "after-prayer",
+      "count": null,
+      "countNote": "see segments",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "resolved-by-independent-review"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "33 applies to the tasbih phrases as printed; tahlil ending carries footnote 3",
+      "segments": [
+        {
+          "segment": "a",
+          "text": "سُبْحَانَ اللهِ",
+          "count": 33,
+          "countScope": "this phrase only (ثلاثاً وثلاثين as printed)"
+        },
+        {
+          "segment": "b",
+          "text": "وَالحَمْدُ لِلَّهِ",
+          "count": 33,
+          "countScope": "this phrase only (ثلاثاً وثلاثين as printed)"
+        },
+        {
+          "segment": "c",
+          "text": "وَاللهُ أَكْبَرُ",
+          "count": 33,
+          "countScope": "this phrase only (ثلاثاً وثلاثين as printed)"
+        },
+        {
+          "segment": "d",
+          "text": "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+          "count": 1,
+          "countScope": "closing tahlil only",
+          "countBasis": "not printed in Hisn; interpreted from the original Muslim 597a: the closing tahlil is given as completing the hundred (تمام المائة), with no numeric count. Checked by fetch at sunnah.com/muslim:597a (summary-level; verbatim Arabic not retrieved)",
+          "countSource": "Muslim 597 (تمام المائة); not printed in Hisn"
+        }
+      ],
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 33,
+          "quote": "من قال ذلك دبر كل صلاة غفرت خطاياه، وإن كانت مثل زبد البحر",
+          "applicability": "block 3 end; the 'ذلك' wording covers the whole dhikr block, so it applies to the block",
+          "verdict": "marker-position",
+          "printedCitation": "مسلم (1/418) برقم 597",
+          "verifiedPrimaryCitation": {
+            "source": "sunnah.com/muslim:597a",
+            "status": "fetched-summary-only",
+            "note": "matches the 33/33/33 tasbih, tahmid, takbir and the closing tahlil as completing the hundred"
+          },
+          "resolvedFrom": null
+        }
+      ],
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 597a (Abu Huraira)",
+          "url": "https://sunnah.com/muslim:597a",
+          "finding": "33 tasbih, 33 tahmid, 33 takbir = 99, then 'وقال تمام المائة' the tahlil once"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b25-006",
+      "chapter": 25,
+      "pdfPage": 33,
+      "printedPage": 31,
+      "timeCondition": "after-prayer",
+      "count": null,
+      "countNote": "no count printed",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "Quranic text not transcribed or generated here. Merge from the official Mushaf page image before any enable.",
+      "type": "quran-reference",
+      "surahAyah": "112:1-4",
+      "quranName": "الإخلاص",
+      "mergeStatus": "pending-official-mushaf-merge",
+      "recitedText": null,
+      "supportStatus": "quran-reference-pending-mushaf-merge",
+      "verifiedCitations": [],
+      "pendingReason": "Quran text not merged; Mushaf merge pending (112:1-4).",
+      "footnoteCitations": [],
+      "rubricCitations": [
+        {
+          "marker": "1 (on the 'بعد كل صلاة' line, PDF 34)",
+          "pdfPage": 34,
+          "citation": "أبو داود (2/86) برقم 1523؛ الترمذي برقم 2903؛ النسائي (3/68) برقم 1335؛ صحيح الترمذي (2/8)؛ فتح الباري (9/62)",
+          "quote": "والسور الثلاث يقال لها: المعوذات",
+          "applicability": "text names the three surahs (group); the rubric placement is UNRESOLVED per instruction",
+          "verdict": "verified (group rubric; text names the three surahs)"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b25-007",
+      "chapter": 25,
+      "pdfPage": 34,
+      "printedPage": 32,
+      "timeCondition": "after-prayer",
+      "count": null,
+      "countNote": "no count printed",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "Quranic text not transcribed or generated here. Merge from the official Mushaf page image before any enable.",
+      "type": "quran-reference",
+      "surahAyah": "113:1-5",
+      "quranName": "الفلق",
+      "mergeStatus": "pending-official-mushaf-merge",
+      "footnoteCitations": [],
+      "rubricCitations": [
+        {
+          "marker": "1 (on the 'بعد كل صلاة' line, PDF 34)",
+          "pdfPage": 34,
+          "citation": "أبو داود (2/86) برقم 1523؛ الترمذي برقم 2903؛ النسائي (3/68) برقم 1335؛ صحيح الترمذي (2/8)؛ فتح الباري (9/62)",
+          "quote": "والسور الثلاث يقال لها: المعوذات",
+          "applicability": "text names the three surahs (group); the rubric placement is UNRESOLVED per instruction",
+          "verdict": "unresolved"
+        }
+      ],
+      "recitedText": null,
+      "supportStatus": "quran-reference-pending-mushaf-merge",
+      "verifiedCitations": [],
+      "pendingReason": "Quran text not merged; Mushaf merge pending (113:1-5). Rubric group citation verified; placement resolved."
+    },
+    {
+      "id": "hisn-b25-008",
+      "chapter": 25,
+      "pdfPage": 34,
+      "printedPage": 32,
+      "timeCondition": "after-prayer",
+      "count": null,
+      "countNote": "no count printed",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "Quranic text not transcribed or generated here. Merge from the official Mushaf page image before any enable.",
+      "type": "quran-reference",
+      "surahAyah": "114:1-6",
+      "quranName": "الناس",
+      "mergeStatus": "pending-official-mushaf-merge",
+      "footnoteCitations": [],
+      "rubricCitations": [
+        {
+          "marker": "1 (on the 'بعد كل صلاة' line, PDF 34)",
+          "pdfPage": 34,
+          "citation": "أبو داود (2/86) برقم 1523؛ الترمذي برقم 2903؛ النسائي (3/68) برقم 1335؛ صحيح الترمذي (2/8)؛ فتح الباري (9/62)",
+          "quote": "والسور الثلاث يقال لها: المعوذات",
+          "applicability": "text names the three surahs (group); the rubric placement is UNRESOLVED per instruction",
+          "verdict": "unresolved"
+        }
+      ],
+      "recitedText": null,
+      "supportStatus": "quran-reference-pending-mushaf-merge",
+      "verifiedCitations": [],
+      "pendingReason": "Quran text not merged; Mushaf merge pending (114:1-6). Rubric group citation verified."
+    },
+    {
+      "id": "hisn-b25-009",
+      "chapter": 25,
+      "pdfPage": 34,
+      "printedPage": 32,
+      "timeCondition": "after-prayer",
+      "count": null,
+      "countNote": "no count printed; rubric 'بعد كل صلاة' printed above this item",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "check-rubric-scope"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "Quranic text not transcribed or generated here. Merge from the official Mushaf page image before any enable.",
+      "type": "quran-reference",
+      "surahAyah": "2:255",
+      "quranName": "آية الكرسي",
+      "mergeStatus": "pending-official-mushaf-merge",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 34,
+          "quote": "«من قرأها دبر كل صلاة لم يمنعه من دخول الجنة إلا أن يموت»",
+          "applicability": "marker after the Ayat al-Kursi line; the citation continues past the page edge and the continuation is not confirmed",
+          "verdict": "continuation resolved from PDF 35 top (book wording)",
+          "printedCitation": "النسائي في عمل اليوم والليلة برقم (100)؛ وابن السني برقم (121)؛ صححه الألباني في صحيح الجامع (5/339) وسلسلة الأحاديث الصحيحة (2/697) برقم (972)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": "PDF 35 top, continuing PDF 34 footnote 2"
+        }
+      ],
+      "recitedText": null,
+      "supportStatus": "quran-reference-pending-mushaf-merge",
+      "verifiedCitations": [],
+      "pendingReason": "Quran text not merged; Mushaf merge pending (2:255). Footnote continuation resolved from PDF 35 top; Nasa'i Amal and Ibn al-Sunni not independently checked."
+    },
+    {
+      "id": "hisn-b25-010",
+      "chapter": 25,
+      "pdfPage": 35,
+      "printedPage": 33,
+      "timeCondition": "after-maghrib-and-fajr",
+      "count": 10,
+      "countNote": "printed (عشر مرات) with condition بعد صلاة المغرب والصبح",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 35,
+          "quote": null,
+          "applicability": "item end, marker-position",
+          "verdict": "marker-position",
+          "printedCitation": "الترمذي (5/515) برقم 3474؛ أحمد (4/227) برقم 17990؛ انظر تخريجه في زاد المعاد (1/300)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Jami at-Tirmidhi 3474 (Abu Dharr)",
+          "url": "https://sunnah.com/tirmidhi:3474",
+          "finding": "10x after Fajr, feet still folded, before speaking"
+        },
+        {
+          "ref": "Jami at-Tirmidhi 3534 (Umara b. Shabib)",
+          "url": "https://sunnah.com/tirmidhi:3534",
+          "finding": "10x at end of Maghrib (Ahmad 4/227 is the same Umara hadith per book citation, Ahmad not checked)"
+        }
+      ],
+      "timeNote": "printed label after-maghrib-and-fajr; primary: Fajr (3474), Maghrib (3534)"
+    },
+    {
+      "id": "hisn-b25-011",
+      "chapter": 25,
+      "pdfPage": 35,
+      "printedPage": 33,
+      "timeCondition": "after-fajr-salam",
+      "count": null,
+      "countNote": "no count printed; condition بعد السلام من صلاة الفجر",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "legacy candidate ap-6",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 35,
+          "quote": null,
+          "applicability": "item end; legacy ap-6",
+          "verdict": "marker-position",
+          "printedCitation": "ابن ماجه برقم 925؛ النسائي في عمل اليوم والليلة برقم 102؛ انظر صحيح ابن ماجه (1/152)؛ مجمع الزوائد (10/111)؛ وسيأتي برقم 95",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا",
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Ibn Majah 925 (Umm Salama)",
+          "url": "https://sunnah.com/ibnmajah:925",
+          "finding": "said after salam of Subh"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-001",
+      "chapter": 27,
+      "pdfPage": 37,
+      "printedPage": 35,
+      "timeCondition": "unstated",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 37,
+          "quote": "لأن أقعد مع قوم يذكرون الله من صلاة الغداة حتى تطلع الشمس أحب إلي من أن أعتق أربعة...",
+          "applicability": "virtue note on sitting in dhikr after Fajr; not a source for the author's introduction text",
+          "verdict": "virtue-note, not text source",
+          "printedCitation": "أبو داود برقم 3667؛ حسنه الألباني في صحيح أبي داود (2/698)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": null,
+      "kind": "author-introduction",
+      "introText": "الحَمْدُ لِلَّهِ وَحْدَهُ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى مَنْ لَا نَبِيَّ بَعْدَهُ",
+      "type": "author-introduction",
+      "supportStatus": "author-introduction",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 3667",
+          "url": "https://sunnah.com/abudawud:3667",
+          "finding": "hadith is about merit of sitting in dhikr gatherings, NOT the wording 'الحمد لله وحده والصلاة والسلام على من لا نبي بعده'"
+        }
+      ],
+      "pendingReason": "Author introduction. The wording has no Prophetic source in the book (fn1 supports dhikr gatherings only). Never attribute to the Prophet; display as book opening line only after a decision."
+    },
+    {
+      "id": "hisn-b27-002",
+      "chapter": 27,
+      "pdfPage": 37,
+      "printedPage": 35,
+      "timeCondition": "unstated",
+      "count": null,
+      "countNote": "no count printed",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "Quranic segment not transcribed here.",
+      "segments": [
+        {
+          "segment": "a",
+          "type": "dhikr",
+          "text": "أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+          "count": null,
+          "countScope": "no count printed"
+        },
+        {
+          "segment": "b",
+          "type": "quran-reference",
+          "surahAyah": "2:255",
+          "quranName": "آية الكرسي",
+          "mergeStatus": "pending-official-mushaf-merge",
+          "text": null,
+          "countScope": "quran reference; no count",
+          "count": null
+        }
+      ],
+      "type": "mixed",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 37,
+          "quote": "من قالها حين يصبح أجير من الجن حتى يمسي، ومن قالها حين يمسي أجير منهم حتى يصبح",
+          "applicability": "text names morning and evening; the Ayat al-Kursi identity is not stated in the quoted fragment, so it is UNRESOLVED",
+          "verdict": "partial",
+          "printedCitation": "الحاكم (1/562)؛ صححه الألباني في صحيح الترغيب (1/273)؛ عزاه للنسائي والطبراني",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "supportStatus": "quran-reference-pending-mushaf-merge",
+      "verifiedCitations": [],
+      "pendingReason": "مرجع القرآن (آية الكرسي) بانتظار الدمج من المصحف الرسمي؛ حكم الهامش إلى الحاكم غير مفحوص، والمقطع الأول (أعوذ بالله) لا يُعرض قبل ذلك."
+    },
+    {
+      "id": "hisn-b27-003",
+      "chapter": 27,
+      "pdfPage": 37,
+      "printedPage": 35,
+      "timeCondition": "morning-and-evening",
+      "count": 3,
+      "countNote": "count 3 printed once after the group (ثلاث مرات) on the next page; applies to the three surahs together",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "Quranic text not transcribed or generated here. Merge from the official Mushaf page image before any enable.",
+      "type": "quran-reference",
+      "surahAyah": "112:1-4",
+      "quranName": "الإخلاص",
+      "mergeStatus": "pending-official-mushaf-merge",
+      "countScope": "group of three surahs (112, 113, 114), count printed once after 114",
+      "recitedText": null,
+      "supportStatus": "quran-reference-pending-mushaf-merge",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5082",
+          "url": "https://sunnah.com/abudawud:5082",
+          "finding": "say Qul huwa Allah ahad and the Mu'awwidhatan three times morning and evening"
+        },
+        {
+          "ref": "Jami at-Tirmidhi 3575",
+          "url": "https://sunnah.com/tirmidhi:3575",
+          "finding": "same, three times evening and morning"
+        }
+      ],
+      "footnoteCitations": []
+    },
+    {
+      "id": "hisn-b27-004",
+      "chapter": 27,
+      "pdfPage": 38,
+      "printedPage": 36,
+      "timeCondition": "morning-and-evening",
+      "count": 3,
+      "countNote": "group count 3, see hisn-b27-003",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "Quranic text not transcribed or generated here. Merge from the official Mushaf page image before any enable.",
+      "type": "quran-reference",
+      "surahAyah": "113:1-5",
+      "quranName": "الفلق",
+      "mergeStatus": "pending-official-mushaf-merge",
+      "countScope": "group of three surahs, see hisn-b27-003",
+      "recitedText": null,
+      "supportStatus": "quran-reference-pending-mushaf-merge",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5082",
+          "url": "https://sunnah.com/abudawud:5082",
+          "finding": "say Qul huwa Allah ahad and the Mu'awwidhatan three times morning and evening"
+        },
+        {
+          "ref": "Jami at-Tirmidhi 3575",
+          "url": "https://sunnah.com/tirmidhi:3575",
+          "finding": "same, three times evening and morning"
+        }
+      ],
+      "footnoteCitations": []
+    },
+    {
+      "id": "hisn-b27-005",
+      "chapter": 27,
+      "pdfPage": 38,
+      "printedPage": 36,
+      "timeCondition": "morning-and-evening",
+      "count": 3,
+      "countNote": "printed (ثلاث مرات) after this item",
+      "arabicReadFromRender": null,
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "Quranic text not transcribed or generated here. Merge from the official Mushaf page image before any enable.",
+      "type": "quran-reference",
+      "surahAyah": "114:1-6",
+      "quranName": "الناس",
+      "mergeStatus": "pending-official-mushaf-merge",
+      "countScope": "group of three surahs; the printed (ثلاث مرات) sits after this item",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 38,
+          "quote": "من قالها ثلاث مرات حين يصبح وحين يمسي كفته من كل شيء",
+          "applicability": "group of three surahs (hisn-b27-003 to 005); text supports count 3 and morning and evening",
+          "verdict": "group-level",
+          "printedCitation": "أبو داود (4/322) برقم 5082؛ الترمذي (5/567) برقم 3575؛ صحيح الترمذي (3/182)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": null,
+      "supportStatus": "quran-reference-pending-mushaf-merge",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5082",
+          "url": "https://sunnah.com/abudawud:5082",
+          "finding": "say Qul huwa Allah ahad and the Mu'awwidhatan three times morning and evening"
+        },
+        {
+          "ref": "Jami at-Tirmidhi 3575",
+          "url": "https://sunnah.com/tirmidhi:3575",
+          "finding": "same, three times evening and morning"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-006",
+      "chapter": 27,
+      "pdfPage": 38,
+      "printedPage": 36,
+      "timeCondition": "morning",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 38,
+          "quote": null,
+          "applicability": "morning item end; no text printed",
+          "verdict": "marker-position",
+          "printedCitation": "مسلم (4/2088) برقم 2723",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "أَصْبَحْنَا وَأَصْبَحَ المُلْكُ لِلَّهِ، وَالحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا اليَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا اليَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الكَسَلِ وَسُوءِ الكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي القَبْرِ",
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 2723a (Ibn Mas'ud)",
+          "url": "https://sunnah.com/muslim:2723",
+          "finding": "evening wording أمسينا وأمسى الملك لله… ; morning form per the hadith's mirror wording"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-007",
+      "chapter": 27,
+      "pdfPage": 39,
+      "printedPage": 37,
+      "timeCondition": "evening",
+      "count": null,
+      "countNote": "no count printed; continues the evening counterpart of hisn-b27-006",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "check-block-boundary",
+        "completedFrom": "PDF 39 (printed 37)"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "beginning of this item sits at top of page; full text continues across the evening passage",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 39,
+          "quote": null,
+          "applicability": "resolved by the book's 'previous reference' wording, not by independent check",
+          "verdict": "sequence (resolved, not independently checked)",
+          "printedCitation": "المرجع السابق",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": "مسلم (4/2088) برقم 2723 (الإحالة السابقة مباشرة على PDF 38 هامش 2)"
+        }
+      ],
+      "instructionText": "وَإِذَا أَمْسَى قَالَ:",
+      "recitedText": "أَمْسَيْنَا وَأَمْسَى المُلْكُ لِلَّهِ، وَالحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الكَسَلِ وَسُوءِ الكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي القَبْرِ",
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 2723a (Ibn Mas'ud)",
+          "url": "https://sunnah.com/muslim:2723",
+          "finding": "evening wording أمسينا وأمسى الملك لله… ; morning form per the hadith's mirror wording"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-008",
+      "chapter": 27,
+      "pdfPage": 39,
+      "printedPage": 37,
+      "timeCondition": "morning",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 39,
+          "quote": null,
+          "applicability": "item end",
+          "verdict": "marker-position",
+          "printedCitation": "الترمذي (5/466) برقم 3391؛ صحيح الترمذي (3/142)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Jami at-Tirmidhi 3391 (Abu Huraira)",
+          "url": "https://sunnah.com/tirmidhi:3391",
+          "finding": "morning form with إليك النشور; evening form with إليك المصير"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-009",
+      "chapter": 27,
+      "pdfPage": 39,
+      "printedPage": 37,
+      "timeCondition": "evening",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 39,
+          "quote": null,
+          "applicability": "resolved by sequence",
+          "verdict": "sequence (resolved, not independently checked)",
+          "printedCitation": "المرجع السابق",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": "الترمذي برقم 3391 (الإحالة السابقة مباشرة)"
+        }
+      ],
+      "instructionText": "وَإِذَا أَمْسَى قَالَ:",
+      "recitedText": "اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ المَصِيرُ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Jami at-Tirmidhi 3391 (Abu Huraira)",
+          "url": "https://sunnah.com/tirmidhi:3391",
+          "finding": "morning form with إليك النشور; evening form with إليك المصير"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-010",
+      "chapter": 27,
+      "pdfPage": 39,
+      "printedPage": 37,
+      "timeCondition": "morning-and-evening",
+      "count": null,
+      "countNote": "no count printed; footnote 2 on the page states morning and evening",
+      "footnoteMarkers": [
+        "1",
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "continues on the next page",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 40,
+          "quote": null,
+          "applicability": "explanatory note, no hadith source",
+          "verdict": "note",
+          "printedCitation": "أقر وأعترف (تعليق لا مصدر)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        },
+        {
+          "marker": "2",
+          "pdfPage": 40,
+          "quote": "من قالها موقنا بها حين يمسي... وكذلك إذا أصبح",
+          "applicability": "text names morning and evening; shared",
+          "verdict": "marker-position",
+          "printedCitation": "البخاري (7/150) برقم 6306",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih al-Bukhari 6306 (Shaddad)",
+          "url": "https://sunnah.com/bukhari:6306",
+          "finding": "sayyid al-istighfar; whoever says it at evening and dies that night enters Paradise, same morning"
+        },
+        {
+          "ref": "Sunan Abi Dawud 5070 (Buraida) also says morning or evening",
+          "url": "https://sunnah.com/abudawud:5070",
+          "finding": ""
+        }
+      ],
+      "timeSource": "printed footnote or primary text (review-confirmed)"
+    },
+    {
+      "id": "hisn-b27-011",
+      "chapter": 27,
+      "pdfPage": 40,
+      "printedPage": 38,
+      "timeCondition": "morning",
+      "count": 4,
+      "countNote": "printed (أربع مرات)",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 40,
+          "quote": "من قالها حين يصبح أو يمسي أربع مرات أعتقه الله من النار",
+          "applicability": "text names both morning and evening, while the item is rubric-labelled morning; keep rubric label, note this",
+          "verdict": "marker-position",
+          "printedCitation": "أبو داود (4/317) برقم 5071؛ البخاري في الأدب المفرد برقم 1201؛ النسائي في عمل اليوم والليلة برقم 9؛ ابن السني برقم 70؛ حسّنه ابن باز",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتَكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ",
+      "supportStatus": "supported-with-mismatch-note",
+      "verifiedCitations": [
+        {
+          "ref": "Al-Adab al-Mufrad 1201",
+          "url": "https://sunnah.com/adab:1201",
+          "finding": "Anas: the dhikr said once frees a quarter, twice half, four times fully from the Fire on that day"
+        },
+        {
+          "ref": "Sunan Abi Dawud 5071 on sunnah.com",
+          "url": "https://sunnah.com/abudawud:5071",
+          "finding": "this number shows a DIFFERENT hadith (Ibn Mas'ud evening); book cites 5071 in Arnaut-style numbering; numbering edition mismatch possible"
+        }
+      ],
+      "mismatchNotes": [
+        "printed Abu Dawud 5071 is a different hadith on sunnah.com (Ibn Mas'ud, evening); count 4 supported by Adab al-Mufrad 1201 (Anas). Printed fn3 names morning and evening while the item carries the printed morning label."
+      ]
+    },
+    {
+      "id": "hisn-b27-012",
+      "chapter": 27,
+      "pdfPage": 40,
+      "printedPage": 38,
+      "timeCondition": "evening",
+      "count": 4,
+      "countNote": "printed (أربع مرات) after the item end on PDF 41",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok",
+        "completedFrom": "PDF 40 (printed 38) to PDF 41 (printed 39)"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 41,
+          "quote": null,
+          "applicability": "resolved by sequence",
+          "verdict": "sequence (resolved, not independently checked)",
+          "printedCitation": "المرجع السابق",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": "أبو داود (4/317) برقم 5071 (الإحالة السابقة على PDF 40 هامش 3)"
+        }
+      ],
+      "instructionText": "وَإِذَا أَمْسَى قَالَ:",
+      "recitedText": "اللَّهُمَّ إِنِّي أَمْسَيْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتَكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ، وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ",
+      "supportStatus": "supported-with-mismatch-note",
+      "verifiedCitations": [
+        {
+          "ref": "Al-Adab al-Mufrad 1201",
+          "url": "https://sunnah.com/adab:1201",
+          "finding": "Anas: the dhikr said once frees a quarter, twice half, four times fully from the Fire on that day"
+        },
+        {
+          "ref": "Sunan Abi Dawud 5071 on sunnah.com",
+          "url": "https://sunnah.com/abudawud:5071",
+          "finding": "this number shows a DIFFERENT hadith (Ibn Mas'ud evening); book cites 5071 in Arnaut-style numbering; numbering edition mismatch possible"
+        }
+      ],
+      "mismatchNotes": [
+        "printed Abu Dawud 5071 is a different hadith on sunnah.com; count 4 supported by Adab al-Mufrad 1201. Evening label printed."
+      ]
+    },
+    {
+      "id": "hisn-b27-013",
+      "chapter": 27,
+      "pdfPage": 41,
+      "printedPage": 39,
+      "timeCondition": "morning",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 41,
+          "quote": "من قالها حين يصبح فقد أدى شكر يومه، ومن قالها حين يمسي فقد أدى شكر ليلته",
+          "applicability": "text names morning and evening; shared",
+          "verdict": "marker-position",
+          "printedCitation": "أبو داود (4/318) برقم 5075؛ النسائي في عمل اليوم والليلة برقم 7؛ ابن السني برقم 41؛ ابن حبان (الموارد) برقم 2361؛ حسّنه ابن باز",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الحَمْدُ وَلَكَ الشُّكْرُ",
+      "supportStatus": "pending",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5073 (Abdullah ibn Ghannam) on sunnah.com",
+          "url": "https://sunnah.com/abudawud:5073",
+          "finding": "the 'ما أصبح بي من نعمة' hadith is numbered 5073 on sunnah.com, not 5075; 5075 there is a different hadith"
+        }
+      ],
+      "mismatchNotes": [
+        "printed Abu Dawud 5075; the hadith is 5073 on sunnah.com (Albani Da'if). 5075 there is a different hadith."
+      ],
+      "pendingReason": "Numbering mismatch (5075 printed, 5073 on sunnah.com, weak per Albani). Kept pending."
+    },
+    {
+      "id": "hisn-b27-014",
+      "chapter": 27,
+      "pdfPage": 41,
+      "printedPage": 39,
+      "timeCondition": "evening",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 41,
+          "quote": null,
+          "applicability": "resolved by sequence",
+          "verdict": "sequence (resolved, not independently checked)",
+          "printedCitation": "المرجع السابق",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": "أبو داود برقم 5075 (الإحالة السابقة)"
+        }
+      ],
+      "instructionText": "وَإِذَا أَمْسَى قَالَ:",
+      "recitedText": "اللَّهُمَّ مَا أَمْسَى بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الحَمْدُ وَلَكَ الشُّكْرُ",
+      "supportStatus": "pending",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5073 (Abdullah ibn Ghannam) on sunnah.com",
+          "url": "https://sunnah.com/abudawud:5073",
+          "finding": "the 'ما أصبح بي من نعمة' hadith is numbered 5073 on sunnah.com, not 5075; 5075 there is a different hadith"
+        }
+      ],
+      "mismatchNotes": [
+        "printed Abu Dawud 5075; the hadith is 5073 on sunnah.com (Albani Da'if). 5075 there is a different hadith."
+      ],
+      "pendingReason": "Numbering mismatch (5075 printed, 5073 on sunnah.com, weak per Albani). Kept pending."
+    },
+    {
+      "id": "hisn-b27-015",
+      "chapter": 27,
+      "pdfPage": 41,
+      "printedPage": 39,
+      "timeCondition": "unstated",
+      "count": 3,
+      "countNote": "printed (ثلاث مرات)",
+      "footnoteMarkers": [
+        "4"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "check-rubric-scope"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "no morning/evening rubric printed directly above; treated as shared pending check",
+      "footnoteCitations": [
+        {
+          "marker": "4",
+          "pdfPage": 41,
+          "quote": "not quoted in the crop",
+          "applicability": "no morning or evening wording is visible for this item; time stays UNRESOLVED",
+          "verdict": "partial",
+          "printedCitation": "أبو داود (4/324) برقم 5092؛ أحمد (5/42) برقم 20430؛ النسائي في عمل اليوم والليلة برقم 22؛ ابن السني برقم 69؛ البخاري في الأدب المفرد برقم 701 (الإكمال في أعلى PDF 42)؛ حسّنه ابن باز",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الكُفْرِ وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ",
+      "supportStatus": "supported-with-mismatch-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5090 (Abu Bakra) on sunnah.com",
+          "url": "https://sunnah.com/abudawud:5090",
+          "finding": "اللهم عافني في بدني…, repeated 3 times morning and 3 times evening; hasan chain per Albani"
+        },
+        {
+          "ref": "Sunan Abi Dawud 5092 on sunnah.com",
+          "url": "https://sunnah.com/abudawud:5092",
+          "finding": "this number is the new-moon hadith, so the book's 5092 does NOT match"
+        }
+      ],
+      "mismatchNotes": [
+        "printed Abu Dawud 5092 is the new-moon hadith on sunnah.com; the dhikr appears as 5090 (Abu Bakra, hasan per Albani), with 3 morning and 3 evening. The book prints no time, so timeCondition stays unstated."
+      ],
+      "printedTime": null,
+      "verifiedPrimaryTime": {
+        "value": "morning-and-evening",
+        "source": "أبو داود 5090 على sunnah.com",
+        "status": "verified-by-fetch"
+      }
+    },
+    {
+      "id": "hisn-b27-016",
+      "chapter": 27,
+      "pdfPage": 42,
+      "printedPage": 40,
+      "timeCondition": "morning-and-evening",
+      "count": 7,
+      "countNote": "printed (سبع مرات)",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "footnote 1 names morning and evening",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 42,
+          "quote": "من قالها حين يصبح وحين يمسي سبع مرات كفاه الله ما أهمه من أمر الدنيا والآخرة",
+          "applicability": "text names morning and evening; shared",
+          "verdict": "marker-position",
+          "printedCitation": "ابن السني برقم 71 (مرفوعا)؛ أبو داود موقوفا برقم 5081 (4/321)؛ زاد المعاد (2/376)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "حَسْبِيَ اللهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
+      "supportStatus": "pending-authenticity",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5081 (Abu al-Darda)",
+          "url": "https://sunnah.com/abudawud:5081",
+          "finding": "7x morning and evening; mawquf; site shows Albani grade Mawdu'"
+        }
+      ],
+      "pendingReason": "Marfu' form rests on Ibn al-Sunni 71 (unchecked). Abu Dawud 5081 is mawquf and Albani grades it Mawdu' on sunnah.com. Do not label sahih.",
+      "timeSource": "printed footnote or primary text (review-confirmed)"
+    },
+    {
+      "id": "hisn-b27-017",
+      "chapter": 27,
+      "pdfPage": 42,
+      "printedPage": 40,
+      "timeCondition": "morning-and-evening",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 42,
+          "quote": null,
+          "applicability": "item end",
+          "verdict": "marker-position",
+          "printedCitation": "أبو داود برقم 5074؛ ابن ماجه برقم 3871؛ صحيح ابن ماجه (2/332)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ العَفْوَ وَالعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ العَفْوَ وَالعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5074 (Ibn Umar)",
+          "url": "https://sunnah.com/abudawud:5074",
+          "finding": "never left these in evening and morning"
+        },
+        {
+          "ref": "Sunan Ibn Majah 3871",
+          "url": "https://sunnah.com/ibnmajah:3871",
+          "finding": "morning and evening"
+        }
+      ],
+      "timeSource": "printed footnote or primary text (review-confirmed)"
+    },
+    {
+      "id": "hisn-b27-018",
+      "chapter": 27,
+      "pdfPage": 42,
+      "printedPage": 40,
+      "timeCondition": "morning-and-evening",
+      "count": null,
+      "countNote": "no count printed; continues onto next page",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 43,
+          "quote": null,
+          "applicability": "item end, continues from PDF 42",
+          "verdict": "marker-position",
+          "printedCitation": "الترمذي برقم 3392؛ أبو داود برقم 5067؛ صحيح الترمذي (3/142)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَاوَاتِ وَالأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءًا، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Jami at-Tirmidhi 3392",
+          "url": "https://sunnah.com/tirmidhi:3392",
+          "finding": "Abu Bakr asked for something to say morning and evening"
+        },
+        {
+          "ref": "Sunan Abi Dawud 5067",
+          "url": "https://sunnah.com/abudawud:5067",
+          "finding": "say it in the morning (rest of the hadith text not read in full)"
+        }
+      ],
+      "timeSource": "printed footnote or primary text (review-confirmed)"
+    },
+    {
+      "id": "hisn-b27-019",
+      "chapter": 27,
+      "pdfPage": 43,
+      "printedPage": 41,
+      "timeCondition": "morning-and-evening",
+      "count": 3,
+      "countNote": "printed (ثلاث مرات)",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "footnote 2 names morning and evening",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 43,
+          "quote": "من قالها ثلاثا إذا أصبح، وثلاثا إذا أمسى لم يضره شيء",
+          "applicability": "text names morning and evening; shared",
+          "verdict": "marker-position",
+          "printedCitation": "أبو داود (4/323) برقم 5088؛ الترمذي (5/465) برقم 3388؛ ابن ماجه برقم 3869؛ أحمد برقم 446",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "بِسْمِ اللهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ العَلِيمُ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5088 (Uthman)",
+          "url": "https://sunnah.com/abudawud:5088",
+          "finding": "3 times"
+        },
+        {
+          "ref": "Jami at-Tirmidhi 3388",
+          "url": "https://sunnah.com/tirmidhi:3388",
+          "finding": "3 times morning and evening"
+        },
+        {
+          "ref": "Sunan Ibn Majah 3869",
+          "url": "https://sunnah.com/ibnmajah:3869",
+          "finding": "3 times morning and evening"
+        }
+      ],
+      "timeSource": "printed footnote or primary text (review-confirmed)"
+    },
+    {
+      "id": "hisn-b27-020",
+      "chapter": 27,
+      "pdfPage": 43,
+      "printedPage": 41,
+      "timeCondition": "morning-and-evening",
+      "count": 3,
+      "countNote": "printed (ثلاث مرات)",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "legacy candidate m-4; footnote 3 names morning and evening",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 43,
+          "quote": "من قالها ثلاثا حين يصبح وثلاثا حين يمسي كان حقا على الله أن يرضيه يوم القيامة",
+          "applicability": "text names morning and evening; shared; legacy m-4",
+          "verdict": "marker-position",
+          "printedCitation": "أحمد (4/337) برقم 18967؛ النسائي في عمل اليوم والليلة برقم 4؛ ابن السني برقم 68؛ أبو داود (4/318) برقم 1531؛ الترمذي (5/465) برقم 3389؛ حسّنه ابن باز",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null,
+          "verificationStatus": "pending: printed number 1531 may be a numbering error; not replaced, not presented as confirmed"
+        }
+      ],
+      "recitedText": "رَضِيتُ بِاللهِ رَبًّا، وَبِالإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ ﷺ نَبِيًّا",
+      "supportStatus": "supported-with-mismatch-note",
+      "verifiedCitations": [
+        {
+          "ref": "Jami at-Tirmidhi 3389 (Thawban)",
+          "url": "https://sunnah.com/tirmidhi:3389",
+          "finding": "رضيت بالله ربا… duty on Allah to please him; the site text shows the evening part; Tirmidhi grading Hasan Gharib"
+        },
+        {
+          "ref": "Sunan Abi Dawud 5072 (Abu Salam) on sunnah.com",
+          "url": "https://sunnah.com/abudawud:5072",
+          "finding": "morning and evening; Albani weak"
+        },
+        {
+          "ref": "Sunan Abi Dawud 1531 on sunnah.com",
+          "url": "https://sunnah.com/abudawud:1531",
+          "finding": "U1 RESOLVED: 1531 is the Friday salawat hadith, NOT this dhikr. The book's number is wrong or typo; use 5072"
+        }
+      ],
+      "mismatchNotes": [
+        "printed Abu Dawud 1531 is the Friday-salawat hadith on sunnah.com, not this dhikr. Printed reference kept, not replaced. Alternative Abu Dawud 5072 (Abu Salam) is Albani Da'if; not confirmed as the same text."
+      ],
+      "timeSource": "printed footnote or primary text (review-confirmed)"
+    },
+    {
+      "id": "hisn-b27-021",
+      "chapter": 27,
+      "pdfPage": 44,
+      "printedPage": 42,
+      "timeCondition": "unstated",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 44,
+          "quote": null,
+          "applicability": "item end",
+          "verdict": "marker-position",
+          "printedCitation": "الحاكم (1/545) وصححه الذهبي؛ صحيح الترغيب والترهيب (1/273)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ",
+      "supportStatus": "pending",
+      "verifiedCitations": [],
+      "pendingReason": "Hakim not checked online; no time claim in the book."
+    },
+    {
+      "id": "hisn-b27-022",
+      "chapter": 27,
+      "pdfPage": 44,
+      "printedPage": 42,
+      "timeCondition": "morning",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 44,
+          "quote": null,
+          "applicability": "morning item end",
+          "verdict": "marker-position",
+          "printedCitation": "أبو داود (4/322) برقم 5084؛ حسّن إسناده شعيب وعبد القادر الأرناؤوط (زاد المعاد 2/373)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "أَصْبَحْنَا وَأَصْبَحَ المُلْكُ لِلَّهِ رَبِّ العَالَمِينَ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا اليَوْمِ: فَتْحَهُ، وَنَصْرَهُ، وَنُورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ",
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5084",
+          "url": "https://sunnah.com/abudawud:5084",
+          "finding": "morning wording; evening says 'the equivalent'; Albani weak"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-023",
+      "chapter": 27,
+      "pdfPage": 44,
+      "printedPage": 42,
+      "timeCondition": "evening",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 44,
+          "quote": null,
+          "applicability": "resolved by sequence",
+          "verdict": "sequence (resolved, not independently checked)",
+          "printedCitation": "المرجع السابق",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": "أبو داود برقم 5084 (الإحالة السابقة)"
+        }
+      ],
+      "instructionText": "وَإِذَا أَمْسَى قَالَ:",
+      "recitedText": "أَمْسَيْنَا وَأَمْسَى المُلْكُ لِلَّهِ رَبِّ العَالَمِينَ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذِهِ اللَّيْلَةِ: فَتْحَهَا، وَنَصْرَهَا، وَنُورَهَا، وَبَرَكَتَهَا، وَهُدَاهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهَا وَشَرِّ مَا بَعْدَهَا",
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5084",
+          "url": "https://sunnah.com/abudawud:5084",
+          "finding": "morning wording; evening says 'the equivalent'; Albani weak"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-024",
+      "chapter": 27,
+      "pdfPage": 44,
+      "printedPage": 42,
+      "timeCondition": "morning",
+      "count": null,
+      "countNote": "no count printed; continues to next page",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "NEW, not in previous candidates (previous e-4 was the evening form)",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 45,
+          "quote": null,
+          "applicability": "morning item end, continues on PDF 45 top",
+          "verdict": "marker-position",
+          "printedCitation": "أحمد (3/406) و(3/407) برقم 15360 و15563؛ ابن السني في عمل اليوم والليلة برقم 34؛ صحيح الجامع (4/209)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "أَصْبَحْنَا عَلَى فِطْرَةِ الإِسْلَامِ، وَعَلَى كَلِمَةِ الإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ ﷺ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ المُشْرِكِينَ",
+      "supportStatus": "pending",
+      "verifiedCitations": [],
+      "pendingReason": "Ahmad 15360 not on sunnah.com; not checked."
+    },
+    {
+      "id": "hisn-b27-025",
+      "chapter": 27,
+      "pdfPage": 45,
+      "printedPage": 43,
+      "timeCondition": "evening",
+      "count": null,
+      "countNote": "no count printed",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "legacy candidate e-4; previously recorded as position uncertain, now located visually on this page",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 45,
+          "quote": null,
+          "applicability": "resolved by sequence; legacy e-4",
+          "verdict": "sequence (resolved, not independently checked)",
+          "printedCitation": "المرجع السابق",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": "أحمد برقم 15360 و15563؛ ابن السني برقم 34 (الإحالة السابقة)"
+        }
+      ],
+      "instructionText": "وَإِذَا أَمْسَى قَالَ:",
+      "recitedText": "أَمْسَيْنَا عَلَى فِطْرَةِ الإِسْلَامِ، وَعَلَى كَلِمَةِ الإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ ﷺ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ المُشْرِكِينَ",
+      "supportStatus": "pending",
+      "verifiedCitations": [],
+      "pendingReason": "Ahmad 15563 not on sunnah.com; not checked."
+    },
+    {
+      "id": "hisn-b27-026",
+      "chapter": 27,
+      "pdfPage": 45,
+      "printedPage": 43,
+      "timeCondition": "morning-and-evening",
+      "count": 100,
+      "countNote": "printed (مائة مرة)",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "footnote 3 names morning and evening",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 45,
+          "quote": "من قالها مائة مرة حين يصبح وحين يمسي لم يأت أحد يوم القيامة بأفضل مما جاء به...",
+          "applicability": "text names morning and evening; shared",
+          "verdict": "marker-position",
+          "printedCitation": "مسلم (4/2071) برقم 2692",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "سُبْحَانَ اللهِ وَبِحَمْدِهِ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 2692",
+          "url": "https://sunnah.com/muslim:2692",
+          "finding": "سبحان الله وبحمده 100 times in morning and evening"
+        }
+      ],
+      "timeSource": "printed footnote or primary text (review-confirmed)"
+    },
+    {
+      "id": "hisn-b27-027",
+      "chapter": 27,
+      "pdfPage": 45,
+      "printedPage": 43,
+      "timeCondition": "unstated",
+      "count": null,
+      "countNote": "printed (عشر مرات); alternative printed: مرة واحدة عند الكسل",
+      "footnoteMarkers": [
+        "4",
+        "5"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "4",
+          "pdfPage": 45,
+          "quote": null,
+          "applicability": "marker on the count 10 phrase",
+          "verdict": "marker-position",
+          "printedCitation": "النسائي في عمل اليوم والليلة برقم 24؛ صحيح الترغيب (1/272)؛ تحفة الأخيار لابن باز (ص44)؛ حديث 255 (ص146)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        },
+        {
+          "marker": "5",
+          "pdfPage": 45,
+          "quote": null,
+          "applicability": "marker on the alternative 'مرة واحدة عند الكسل'",
+          "verdict": "marker-position",
+          "printedCitation": "أبو داود برقم 5077؛ ابن ماجه برقم 3798؛ أحمد برقم 8719؛ صحيح الترغيب (1/270)؛ صحيح أبي داود (3/957)؛ صحيح ابن ماجه (2/331)؛ زاد المعاد (2/377)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "countAlternatives": [
+        {
+          "count": 10,
+          "condition": null,
+          "source": "النسائي في عمل اليوم والليلة 24 (مطبوع x10)"
+        },
+        {
+          "count": 1,
+          "condition": "عند الكسل (مطبوع في الهامش 5)",
+          "source": "أبو داود 5077 (مطبوع في الهامش 5)"
+        }
+      ],
+      "supportStatus": "pending-options",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Abi Dawud 5077",
+          "url": "https://sunnah.com/abudawud:5077",
+          "finding": "once in the morning (and evening) with 10 deeds written etc.; NOT 'عند الكسل' on its face"
+        },
+        {
+          "ref": "Sunan Ibn Majah 3798",
+          "url": "https://sunnah.com/ibnmajah:3798",
+          "finding": "100 times in a day"
+        },
+        {
+          "ref": "Bukhari 3293 / Muslim 2691",
+          "url": "https://sunnah.com/bukhari:3293",
+          "finding": "100 times in a day, protection until evening (this is b27-028)"
+        }
+      ],
+      "pendingReason": "Book prints x10 (Nasa'i 24) and once when lazy (fn5). Abu Dawud 5077 says once in the morning and evening. Both options stored; no single count or time claim."
+    },
+    {
+      "id": "hisn-b27-028",
+      "chapter": 27,
+      "pdfPage": 46,
+      "printedPage": 44,
+      "timeCondition": "morning",
+      "count": 100,
+      "countNote": "printed (مائة مرة إذا أصبح)",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "same text as hisn-b27-027 with a different count and condition",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 46,
+          "quote": "من قالها مائة مرة في يوم كانت له عدل عشر رقاب...",
+          "applicability": "the quoted text says 'في يوم', not 'إذا أصبح'; the printed morning condition is kept as printed and this mismatch is noted",
+          "verdict": "partial",
+          "printedCitation": "البخاري (4/95) برقم 3293؛ مسلم (4/2071) برقم 2691",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "supportStatus": "supported-with-mismatch-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih al-Bukhari 3293",
+          "url": "https://sunnah.com/bukhari:3293",
+          "finding": "100 times in one day; protection from morning to evening"
+        },
+        {
+          "ref": "Sahih Muslim 2691",
+          "url": "https://sunnah.com/muslim:2691",
+          "finding": "100 times each day"
+        }
+      ],
+      "mismatchNotes": [
+        "printed condition is إذا أصبح; the hadith (Bukhari 3293, Muslim 2691) says in one day, protection until evening. Printed condition kept."
+      ]
+    },
+    {
+      "id": "hisn-b27-029",
+      "chapter": 27,
+      "pdfPage": 46,
+      "printedPage": 44,
+      "timeCondition": "morning",
+      "count": 3,
+      "countNote": "printed (ثلاث مرات إذا أصبح)",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 46,
+          "quote": null,
+          "applicability": "morning item end",
+          "verdict": "marker-position",
+          "printedCitation": "مسلم (4/2090) برقم 2726",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "سُبْحَانَ اللهِ وَبِحَمْدِهِ، عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ",
+      "supportStatus": "supported",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 2726 (Juwairiya)",
+          "url": "https://sunnah.com/muslim:2726",
+          "finding": "3 times after the dawn prayer (the 4 words)"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-030",
+      "chapter": 27,
+      "pdfPage": 46,
+      "printedPage": 44,
+      "timeCondition": "morning",
+      "count": null,
+      "countNote": "no count printed; condition إذا أصبح",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "morning form; NOT the same item as hisn-b25-011",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 46,
+          "quote": null,
+          "applicability": "same ibn Majah 925 as hisn-b25-011, a different condition (إذا أصبح)",
+          "verdict": "marker-position",
+          "printedCitation": "ابن السني برقم 54؛ ابن ماجه برقم 925؛ حسّنه عبد القادر وشعيب الأرناؤوط (زاد المعاد 2/375)؛ وتقدم برقم 73",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا",
+      "supportStatus": "supported-with-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sunan Ibn Majah 925",
+          "url": "https://sunnah.com/ibnmajah:925",
+          "finding": "Umm Salama: this dua after Subh salam"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-031",
+      "chapter": 27,
+      "pdfPage": 47,
+      "printedPage": 45,
+      "timeCondition": "daily",
+      "count": null,
+      "countNote": "printed (مائة مرة في اليوم)",
+      "footnoteMarkers": [
+        "1"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "1",
+          "pdfPage": 47,
+          "quote": null,
+          "applicability": "item end",
+          "verdict": "marker-position",
+          "printedCitation": "البخاري (11/101) برقم 6307؛ مسلم (4/2075) برقم 2702",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "أَسْتَغْفِرُ اللهَ وَأَتُوبُ إِلَيْهِ",
+      "supportStatus": "supported-with-mismatch-note",
+      "verifiedCitations": [
+        {
+          "ref": "Sahih Muslim 2702a (al-Aghar)",
+          "url": "https://sunnah.com/muslim:2702",
+          "finding": "100 times a day"
+        },
+        {
+          "ref": "Sahih al-Bukhari 6307",
+          "url": "https://sunnah.com/bukhari:6307",
+          "finding": "'more than seventy times' a day (not 100)"
+        }
+      ],
+      "mismatchNotes": [
+        "Muslim 2702 says 100 a day; Bukhari 6307 says more than seventy. Both kept as options; count 100 is the Muslim figure."
+      ],
+      "countAlternatives": [
+        {
+          "relation": "more-than",
+          "value": 70,
+          "source": "البخاري 6307",
+          "note": "مقارنة مصدر، وليست عدد 70"
+        }
+      ]
+    },
+    {
+      "id": "hisn-b27-032",
+      "chapter": 27,
+      "pdfPage": 47,
+      "printedPage": 45,
+      "timeCondition": "evening",
+      "count": 3,
+      "countNote": "printed (ثلاث مرات) with condition إذا أمسى",
+      "footnoteMarkers": [
+        "2"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "ok"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "",
+      "footnoteCitations": [
+        {
+          "marker": "2",
+          "pdfPage": 47,
+          "quote": "من قالها حين يمسي ثلاث مرات لم تضره حمة تلك الليلة",
+          "applicability": "evening; text confirms evening",
+          "verdict": "marker-position",
+          "printedCitation": "أحمد (2/290) برقم 7898؛ النسائي في عمل اليوم والليلة برقم 590؛ ابن السني برقم 68؛ صحيح ابن ماجه (2/266)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+      "supportStatus": "pending",
+      "verifiedCitations": [],
+      "pendingReason": "Ahmad 7898 and Nasa'i Amal 590 not checked online; book wording only."
+    },
+    {
+      "id": "hisn-b27-033",
+      "chapter": 27,
+      "pdfPage": 47,
+      "printedPage": 45,
+      "timeCondition": "morning-and-evening",
+      "count": 10,
+      "countNote": "printed (عشر مرات)",
+      "footnoteMarkers": [
+        "3"
+      ],
+      "evidence": {
+        "method": "visual-read-of-rendered-page",
+        "textLayerUsable": false,
+        "boundaryStatus": "check-rubric-scope"
+      },
+      "status": "candidate-not-enabled",
+      "enabled": false,
+      "note": "last item of chapter 27; chapter 28 (أذكار النوم) starts on this page",
+      "footnoteCitations": [
+        {
+          "marker": "3",
+          "pdfPage": 47,
+          "quote": "من صلى علي حين يصبح عشرا، وحين يمسي عشرا، أدركته شفاعتي يوم القيامة",
+          "applicability": "text names morning and evening; time changed to shared (morning and evening)",
+          "verdict": "marker-position",
+          "printedCitation": "الطبراني بإسنادين (أحدهما جيد)؛ مجمع الزوائد (10/120)؛ صحيح الترغيب (1/273)",
+          "verifiedPrimaryCitation": null,
+          "resolvedFrom": null
+        }
+      ],
+      "recitedText": "اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ",
+      "supportStatus": "pending",
+      "verifiedCitations": [],
+      "pendingReason": "Tabarani not checked online; book fn3 text only.",
+      "timeSource": "printed footnote or primary text (review-confirmed)"
+    }
+  ],
+  "changeLog": [
+    "v5 applies review v3Findings: supportStatus per item; verifiedCitations separate from printed footnotes",
+    "mismatchNotes added for printed references that sunnah.com numbering disagrees with (011/012, 013/014, 015, 020, 028, 031); printed refs are NOT replaced",
+    "b25-009 footnote continuation resolved from PDF 35 top; b25-006 receives the verified group rubric citation",
+    "time labels: printed label kept where printed; b27-015 stays unstated (book prints no time; 5090 noted as evidence only)",
+    "b27-027 has two countAlternatives (10 and once when lazy) and no single count, no time claim",
+    "b27-031 count 100 with alternative 70 (Bukhari 6307)",
+    "b27-001 kind author-introduction: no Prophetic attribution; pending decision on display",
+    "b27-016 pending authenticity (marfu' form unchecked)",
+    "b25-005 segment d count 1 carries countSource: not printed in Hisn",
+    "enabled stays false for every item; 11 approved records untouched",
+    "v6: b27-031 alternative is a relation (more-than 70, Bukhari 6307), not count 70",
+    "v6: b27-015 printedTime null, verifiedPrimaryTime 5090 kept separate",
+    "v6: b27-002 is a Quran-reference item (8 pending Quran references in total)"
+  ],
+  "independentReviewStatus": "pending (not enabled)",
+  "footnoteMethod": "each footnote region re-rendered at 220 dpi and read visually; citations are per page; 'المرجع السابق' resolved by sequence and labelled as such; no footnote hadith text was generated",
+  "basisNote": "Built from matrix v4 and content/candidates/citation-review-independent.json (v3Findings). Verified = sunnah.com lookups by the reviewer; printed = Hisn footnotes read from page images. Not all 44 items are complete.",
+  "supportCounts": {
+    "supported": 11,
+    "supported-with-note": 9,
+    "quran-reference-pending-mushaf-merge": 8,
+    "author-introduction": 1,
+    "supported-with-mismatch-note": 6,
+    "pending": 7,
+    "pending-authenticity": 1,
+    "pending-options": 1
+  },
+  "stillPending": [
+    {
+      "id": "hisn-b27-002",
+      "reason": "Ayat al-Kursi identity within Hakim 1/562 fn not stated in the quoted fragment; Hakim not checkable on sunnah.com"
+    },
+    {
+      "id": "hisn-b27-016",
+      "reason": "Marfu' form rests on Ibn al-Sunni 71 (unchecked); Abu Dawud 5081 is mawquf and shows Albani Mawdu' on sunnah.com; display with caveat, do not label sahih"
+    },
+    {
+      "id": "hisn-b27-027",
+      "reason": "Book prints x10 or once when lazy; Abu Dawud 5077 says once in the morning/evening; store both options, no time claim"
+    },
+    {
+      "id": "hisn-b27-001",
+      "reason": "No Prophetic source for the wording; fn1 supports dhikr gatherings only; display as book opening, no hadith attribution"
+    },
+    {
+      "id": "hisn-b27-024/025/032 and Ahmad/Nasa'i Amal/Ibn al-Sunni/Ibn Hibban/Tabarani/Hakim refs",
+      "reason": "Not checkable on sunnah.com; book wording only"
+    },
+    {
+      "id": "hisn-b27-028",
+      "reason": "Printed 'إذا أصبح' vs hadith 'في يوم' (Bukhari 3293, Muslim 2691 verified); keep printed condition and note the mismatch"
+    },
+    {
+      "id": "hisn-b27-031",
+      "reason": "Count 100 is Muslim 2702; Bukhari 6307 says more than 70; record both"
+    }
+  ],
+  "mismatchNotesRegistry": [
+    {
+      "id": "hisn-b27-020",
+      "printed": "Abu Dawud 4/318 no.1531",
+      "finding": "1531 is the Friday-salawat hadith on sunnah.com; alternative Abu Dawud 5072 (Abu Salam), Albani Da'if"
+    },
+    {
+      "id": "hisn-b27-013/014",
+      "printed": "Abu Dawud 4/318 no.5075",
+      "finding": "Hadith appears as 5073 (Ibn Ghannam, Albani Da'if) on sunnah.com; 5075 there is a different hadith"
+    },
+    {
+      "id": "hisn-b27-015",
+      "printed": "Abu Dawud 4/324 no.5092",
+      "finding": "Appears as 5090 on sunnah.com; 5092 there is the new-moon hadith"
+    },
+    {
+      "id": "hisn-b27-011/012",
+      "printed": "Abu Dawud 4/317 no.5071",
+      "finding": "5071 on sunnah.com is a different (Ibn Mas'ud evening) hadith; count 4 independently supported by Adab al-Mufrad 1201 (Anas)"
+    }
+  ]
+}
