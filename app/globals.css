@@ -160,3 +160,14 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
  .tab { min-width: 0; flex: 1 1 28%; }
  .chip { min-width: 0; flex: 1 1 28%; padding: 9px 6px; }
 }
+
+/* نص القرآن: خط Amiri Quran لنص الآيات فقط، والاحتياطي للباقي. */
+.quran-verses {
+  font-family: "AmiriQuranTanzil", "Noto Naskh Arabic", system-ui, serif;
+}
+.quran-text {
+  direction: rtl;
+  text-align: justify;
+}
+.quran-num { color: var(--muted); font-size: 0.85em; }
+.quran-sajda { color: var(--accent); font-weight: 700; }

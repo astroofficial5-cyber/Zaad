@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "predev": "node scripts/select-candidates.mjs",
-    "prebuild": "node scripts/select-candidates.mjs",
+    "predev": "node scripts/build-quran.mjs && node scripts/select-candidates.mjs",
+    "prebuild": "node scripts/build-quran.mjs && node scripts/select-candidates.mjs",
     "build": "next build",
     "start": "next start",
     "test": "node --test tests/*.test.mjs",
     "check:publication": "node scripts/check-publication.mjs",
-    "verify:default-build": "node scripts/verify-default-build.mjs"
+    "verify:default-build": "node scripts/verify-default-build.mjs",
+    "build:quran": "node scripts/build-quran.mjs"
   },
   "dependencies": {
     "next": "15.5.29",

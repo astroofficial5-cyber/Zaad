@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import PrayerTab from "../components/PrayerTab";
 import AzkarTab from "../components/AzkarTab";
-import QuranTab from "../components/QuranTab";
+import QuranTextTab from "../components/QuranTextTab";
 import QiblaTab from "../components/QiblaTab";
 import SettingsTab from "../components/SettingsTab";
 import { loadSettings, saveSettings, loadPlace, DEFAULT_SETTINGS } from "../lib/settings.js";
@@ -87,7 +87,7 @@ export default function Home() {
             hidden={tab !== "prayer"}
           />
           <AzkarTab hidden={tab !== "azkar"} />
-          <QuranTab hidden={tab !== "quran"} />
+          <QuranTextTab hidden={tab !== "quran"} />
           <QiblaTab place={place} onGoToPrayer={() => setTab("prayer")} hidden={tab !== "qibla"} />
           {tab === "settings" && <SettingsTab settings={settings} onChange={update} />}
         </>
