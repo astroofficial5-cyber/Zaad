@@ -69,3 +69,11 @@ test("الخط والترخيص موجودين ومطابقين للمصدر", (
   assert.ok(lic.includes("SIL OPEN FONT LICENSE Version 1.1"));
   assert.ok(lic.includes("Amiri Quran Project Authors"));
 });
+
+test("القارئ: مفاتيح التخزين وحدود الخط والبحث موجودين", () => {
+  const src = readFileSync(new URL("../components/QuranTextTab.tsx", import.meta.url), "utf8");
+  assert.ok(src.includes('"zaad:quran:font"'));
+  assert.ok(src.includes('"zaad:quran:last"'));
+  assert.ok(src.includes("const FONT_MIN = 1.0;") && src.includes("const FONT_MAX = 2.2;"));
+  assert.ok(src.includes('placeholder="ابحث باسم السورة أو رقمها"'));
+});

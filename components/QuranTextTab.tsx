@@ -15,10 +15,68 @@ function toArabicDigits(n: number): string {
   return String(n).replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[Number(d)]);
 }
 
+// مفاتيح التخزين المحلي، ومعظمها اختياري: لو التخزين مش متاح، القارئ بيشتغل عادي.
+const FONT_KEY = "zaad:quran:font";
+const LAST_KEY = "zaad:quran:last";
+const FONT_MIN = 1.0;
+const FONT_MAX = 2.2;
+const FONT_STEP = 0.15;
+const FONT_DEFAULT = 1.45;
+
+function readStored(key: string): string | null {
+  try {
+    return typeof localStorage === "undefined" ? null : localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+function writeStored(key: string, value: string) {
+  try {
+    if (typeof localStorage !== "undefined") localStorage.setItem(key, value);
+  } catch {
+    /* التخزين مش متاح: مفيش مشكلة */
+  }
+}
+
+// تطبيع الاسم للبحث: بيشيل التشكيل وبيوحّد الألف والتاء المربوطة والياء
+function normalizeAr(s: string): string {
+  return s
+    .replace(/[٠-٩]/g, (d) => String(d.charCodeAt(0) - 0x0660))
+    .replace(/[ً-ٰٟۖ-ۭ]/g, "")
+    .replace(/[أإآ]/g, "ا")
+    .replace(/ة/g, "ه")
+    .replace(/ى/g, "ي")
+    .trim();
+}
+
 export default function QuranTextTab({ hidden }: { hidden: boolean }) {
   const [data, setData] = useState<QuranData | null>(null);
   const [error, setError] = useState(false);
   const [openSura, setOpenSura] = useState<number | null>(null);
+  const [query, setQuery] = useState("");
+  const [fontSize, setFontSize] = useState<number>(FONT_DEFAULT);
+  const [lastSura, setLastSura] = useState<number | null>(null);
+
+  useEffect(() => {
+    const f = Number(readStored(FONT_KEY));
+    if (f >= FONT_MIN && f <= FONT_MAX) setFontSize(f);
+    const l = Number(readStored(LAST_KEY));
+    if (Number.isInteger(l) && l >= 1 && l <= 114) setLastSura(l);
+  }, []);
+
+  function changeFont(delta: number) {
+    setFontSize((prev) => {
+      const next = Math.min(FONT_MAX, Math.max(FONT_MIN, Math.round((prev + delta) * 100) / 100));
+      writeStored(FONT_KEY, String(next));
+      return next;
+    });
+  }
+
+  function openSuraAt(n: number) {
+    setOpenSura(n);
+    setLastSura(n);
+    writeStored(LAST_KEY, String(n));
+  }
 
   // خط Amiri Quran (OFL 1.1) لنص الآيات فقط. الملف جنب الموقع في public/fonts.
   useEffect(() => {
@@ -67,9 +125,29 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
     <section>
       {sura ? (
         <>
-          <button type="button" onClick={() => setOpenSura(null)} className="full" style={{ marginBottom: 12 }}>
-            رجوع إلى السور
-          </button>
+          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+            <button type="button" onClick={() => setOpenSura(null)} className="full" style={{ flex: 2 }}>
+              رجوع إلى السور
+            </button>
+            <button
+              type="button"
+              onClick={() => changeFont(-FONT_STEP)}
+              disabled={fontSize <= FONT_MIN}
+              aria-label="تصغير الخط"
+              style={{ flex: 1 }}
+            >
+              A−
+            </button>
+            <button
+              type="button"
+              onClick={() => changeFont(FONT_STEP)}
+              disabled={fontSize >= FONT_MAX}
+              aria-label="تكبير الخط"
+              style={{ flex: 1 }}
+            >
+              A+
+            </button>
+          </div>
           <h2 style={{ textAlign: "center", margin: "4px 0 12px" }}>
             سورة {sura.name} <span className="muted">({toArabicDigits(sura.ayas.length)} آية)</span>
           </h2>
@@ -78,7 +156,7 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
               {sura.ayas[0].bismillah}
             </p>
           )}
-          <div className="card quran-text quran-verses" style={{ lineHeight: 2.4, fontSize: "1.45rem" }}>
+          <div className="card quran-text quran-verses" style={{ lineHeight: 2.4, fontSize: `${fontSize}rem` }}>
             {sura.ayas.map((a) => (
               <span key={a.n} className="quran-aya">
                 {a.text}
@@ -90,12 +168,38 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
       ) : (
         <>
           <h2 style={{ textAlign: "center", margin: "4px 0 12px" }}>السور</h2>
+          {lastSura !== null && (
+            <button
+              type="button"
+              className="full"
+              onClick={() => openSuraAt(lastSura)}
+              style={{ marginBottom: 10 }}
+            >
+              متابعة من آخر سورة: {data.suras[lastSura - 1]?.name}
+            </button>
+          )}
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="ابحث باسم السورة أو رقمها"
+            aria-label="بحث في السور"
+            className="full"
+            style={{ marginBottom: 10 }}
+          />
           <ul className="quran-list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            {data.suras.map((s) => (
+            {data.suras
+              .filter((s) => {
+                const q = normalizeAr(query);
+                if (!q) return true;
+                if (/^\d+$/.test(q)) return String(s.n) === q;
+                return normalizeAr(s.name).includes(q);
+              })
+              .map((s) => (
               <li key={s.n}>
                 <button
                   type="button"
-                  onClick={() => setOpenSura(s.n)}
+                  onClick={() => openSuraAt(s.n)}
                   className="full"
                   style={{ display: "flex", justifyContent: "space-between", margin: "0 0 8px" }}
                 >
