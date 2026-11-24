@@ -1,7 +1,7 @@
 // Service Worker: يخزن ملفات الواجهة عشان تفتح أوفلاين.
 // ملاحظة: ده مش تنبيه في الخلفية. الإشعارات بتتعامل معاها الصفحة أو طبقة أندرويد الأصلية.
-const CACHE = "zaad-v6";
-const SHELL = ["/", "/manifest.json", "/icon.svg"];
+const CACHE = "zaad-v7";
+const SHELL = ["./", "./manifest.json", "./icon.svg"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -40,7 +40,7 @@ self.addEventListener("fetch", (event) => {
             }
             return res;
           })
-          .catch(() => caches.match("/"))
+          .catch(() => caches.match("./"))
     )
   );
 });

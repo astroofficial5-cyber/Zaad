@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "زاد، الصلاة والقرآن والأذكار",
   description: "مواقيت الصلاة والقبلة والأذكار. بدون حسابات.",
-  manifest: "/manifest.json",
+  manifest: "./manifest.json",
 };
 
 export const viewport: Viewport = {

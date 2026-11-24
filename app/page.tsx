@@ -30,7 +30,7 @@ export default function Home() {
     setPlace(loadPlace());
     setReady(true);
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").catch(() => {
+      navigator.serviceWorker.register("./sw.js").catch(() => {
         // الـ PWA اختياري، والتطبيق يشتغل بدونه
       });
     }
