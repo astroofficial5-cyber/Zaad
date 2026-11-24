@@ -16,6 +16,34 @@ export default function QiblaTab({
     status: "idle",
   });
   const [attempt, setAttempt] = useState(0);
+  // حالة مستشعر الاتجاه (البوصلة): الشاشة بتعرض رسالة إرشادية حسب الحالة
+  const [sensor, setSensor] = useState<"checking" | "unsupported" | "no-reading" | "ok">("checking");
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("DeviceOrientationEvent" in window)) {
+      setSensor("unsupported");
+      return;
+    }
+    let got = false;
+    const onOrientation = (e: Event) => {
+      const ev = e as DeviceOrientationEvent;
+      if (ev.alpha !== null && ev.alpha !== undefined) {
+        got = true;
+        setSensor("ok");
+      }
+    };
+    window.addEventListener("deviceorientationabsolute", onOrientation);
+    window.addEventListener("deviceorientation", onOrientation);
+    // لو مفيش قراءة بعد ثانيتين ونص، بنعرض رسالة المعايرة بدل ما نسيب الشاشة فاضية
+    const timer = window.setTimeout(() => {
+      if (!got) setSensor("no-reading");
+    }, 2500);
+    return () => {
+      window.removeEventListener("deviceorientationabsolute", onOrientation);
+      window.removeEventListener("deviceorientation", onOrientation);
+      window.clearTimeout(timer);
+    };
+  }, []);
 
   const lat = place?.lat;
   const lon = place?.lon;
@@ -77,6 +105,21 @@ export default function QiblaTab({
           <p className="warn">
             السهم بيوضح اتجاه القبلة بالنسبة للشمال فقط. الشاشة مش بتقرأ البوصلة، فلازم تحدد الشمال بنفسك أو بتطبيق بوصلة.
           </p>
+          {sensor === "unsupported" && (
+            <p className="muted">
+              متصفحك ما بيدعمش مستشعر الاتجاه. استخدم بوصلة الجهاز أو تطبيق بوصلة لتحديد الشمال.
+            </p>
+          )}
+          {sensor === "no-reading" && (
+            <p className="muted">
+              مفيش قراءة من مستشعر الاتجاه على جهازك الآن. تأكد إن إذن الحركة والاتجاه مفعّل، وحرّك الهاتف في شكل رقم 8 لمعايرة البوصلة.
+            </p>
+          )}
+          {sensor === "ok" && (
+            <p className="muted">
+              لو الاتجاه مش دقيق، حرّك الهاتف في شكل رقم 8 لمعايرة البوصلة، وابعد عن المعادن والمغناطيس.
+            </p>
+          )}
         </div>
       )}
     </section>
