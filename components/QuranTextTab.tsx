@@ -82,7 +82,6 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
             {sura.ayas.map((a) => (
               <span key={a.n} className="quran-aya">
                 {a.text}
-                {a.text.includes(SAJDA) && <span className="quran-sajda" aria-label="آية سجدة"> ۩</span>}
                 <span className="quran-num" aria-hidden="true"> ﴿{toArabicDigits(a.n)}﴾ </span>
               </span>
             ))}
