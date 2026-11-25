@@ -5,6 +5,11 @@ import { AZKAR_SECTIONS, SECTION_SOURCES } from "../lib/azkarData.js";
 import { getAzkarState } from "../lib/approvedContent.js";
 import AzkarCandidates, { CANDIDATES_ENABLED, CANDIDATES_TAB_LABEL } from "./AzkarCandidatesRuntime";
 
+// أرقام عربية عشان العدّاد يتقري صح في الاتجاه العربي
+function toArDigits(n: number): string {
+  return String(n).replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[Number(d)]);
+}
+
 // العدّاد بيتخزن لكل يوم، وبيشتغل بس على نص معتمد
 function todayKey() {
   return new Date().toDateString();
@@ -164,10 +169,17 @@ function AzkarItem({ itemId }: { itemId: string }) {
           className="primary"
           onClick={bump}
           disabled={count >= state.count}
-          aria-label={count >= state.count ? `تم، ${count} من ${state.count}` : `عدّ، ${count} من ${state.count}`}
+          aria-label={count >= state.count ? `تم الذكر، ${count} من ${state.count}` : `عدّ، أتممت ${count} من ${state.count}`}
           style={{ width: "100%", minHeight: 96, fontSize: "1.5rem", fontWeight: 700 }}
         >
-          {count >= state.count ? `تم (${count} من ${state.count})` : `${count} / ${state.count}`}
+          {count >= state.count
+            ? `✓ تم الذكر ${toArDigits(state.count)} مرة`
+            : `أتممت ${toArDigits(count)} من ${toArDigits(state.count)}`}
+          {count < state.count && (
+            <span style={{ display: "block", fontSize: "0.9rem", fontWeight: 400, opacity: 0.85, marginTop: 4 }}>
+              اضغط للعدّ
+            </span>
+          )}
         </button>
         <button
           className="ghost"
