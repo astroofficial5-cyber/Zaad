@@ -1,0 +1,83 @@
+{
+  "status": "pending-review: غير مربوط بالتطبيق ولا بـ records/index.json",
+  "records": [
+    {
+      "id": "hisn-ms-ashhadk-4-m-v1",
+      "targetId": "ms-ashhadk-4-m",
+      "kind": "dhikr",
+      "arabicText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ",
+      "count": 4,
+      "reference": "حصن المسلم، سعيد بن علي بن وهف القحطاني، نسخة رسالة الحرمين، باب 27، الباب 27 من أذكار الصباح والمساء (نص المطبوع)",
+      "sourceId": "hisn-risala",
+      "sourceUrl": "https://risala.prh.gov.sa/ar/content/51",
+      "method": "manual-copy",
+      "fetchedAt": "2026-11-25T07:32:23Z",
+      "importedBy": "hisn-source-extraction",
+      "countNote": "أربع مرات كما في نص الكتاب.",
+      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، مع مقارنة الصورة المطبوعة للعدد والمرجع. لم تُراجع بعد."
+    },
+    {
+      "id": "hisn-ms-afini-3-v1",
+      "targetId": "ms-afini-3",
+      "kind": "dhikr",
+      "arabicText": "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ",
+      "count": 3,
+      "reference": "حصن المسلم، سعيد بن علي بن وهف القحطاني، نسخة رسالة الحرمين، باب 27، الباب 27 من أذكار الصباح والمساء (نص المطبوع)",
+      "sourceId": "hisn-risala",
+      "sourceUrl": "https://risala.prh.gov.sa/ar/content/51",
+      "method": "manual-copy",
+      "fetchedAt": "2026-11-25T07:32:23Z",
+      "importedBy": "hisn-source-extraction",
+      "countNote": "ثلاث مرات كما في نص الكتاب.",
+      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، مع مقارنة الصورة المطبوعة للعدد والمرجع. لم تُراجع بعد."
+    },
+    {
+      "id": "hisn-ms-khalqihi-3-m-v1",
+      "targetId": "ms-khalqihi-3-m",
+      "kind": "dhikr",
+      "arabicText": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ",
+      "count": 3,
+      "reference": "حصن المسلم، سعيد بن علي بن وهف القحطاني، نسخة رسالة الحرمين، باب 27، الباب 27 من أذكار الصباح والمساء (نص المطبوع)",
+      "sourceId": "hisn-risala",
+      "sourceUrl": "https://risala.prh.gov.sa/ar/content/51",
+      "method": "manual-copy",
+      "fetchedAt": "2026-11-25T07:32:23Z",
+      "importedBy": "hisn-source-extraction",
+      "countNote": "ثلاث مرات إذا أصبح، كما في نص الكتاب.",
+      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، مع مقارنة الصورة المطبوعة للعدد والمرجع. لم تُراجع بعد."
+    }
+  ],
+  "primaryReferences": {
+    "ms-ashhadk-4-m": {
+      "label": "سنن أبي داود، 5069 (ترقيم sunnah.com)؛ الكتاب مطبوع 5071",
+      "url": "https://sunnah.com/abudawud:5069",
+      "verification": "pending-reviewer-sunnah-check",
+      "verifiedAt": "2026-11-25T07:32:23Z",
+      "note": "ضعّفه الألباني حسب مراجعة المصدر؛ لفظ حكمه على sunnah.com يُؤكَّد قبل النشر."
+    },
+    "ms-afini-3": {
+      "label": "سنن أبي داود، 5090 (ترقيم sunnah.com)؛ الكتاب مطبوع 5092",
+      "url": "https://sunnah.com/abudawud:5090",
+      "verification": "pending-reviewer-sunnah-check",
+      "verifiedAt": "2026-11-25T07:32:23Z"
+    },
+    "ms-khalqihi-3-m": {
+      "label": "صحيح مسلم، 2726",
+      "url": "https://sunnah.com/muslim:2726",
+      "verification": "pending-reviewer-sunnah-check",
+      "verifiedAt": "2026-11-25T07:32:23Z"
+    }
+  },
+  "sections": {
+    "ms-ashhadk-4-m": [
+      "morning"
+    ],
+    "ms-afini-3": [
+      "morning",
+      "evening"
+    ],
+    "ms-khalqihi-3-m": [
+      "morning"
+    ]
+  }
+}
