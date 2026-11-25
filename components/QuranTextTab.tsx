@@ -198,7 +198,7 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
                 if (window.history.state && window.history.state.zaadQuran) window.history.back();
                 else setOpenSura(null);
               }}
-              className="full"
+              className="ghost quran-tool"
               style={{ flex: 2 }}
             >
               رجوع إلى السور
@@ -208,6 +208,7 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
               onClick={() => changeFont(-FONT_STEP)}
               disabled={fontSize <= FONT_MIN}
               aria-label="تصغير الخط"
+              className="ghost quran-tool"
               style={{ flex: 1 }}
             >
               A−
@@ -217,6 +218,7 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
               onClick={() => changeFont(FONT_STEP)}
               disabled={fontSize >= FONT_MAX}
               aria-label="تكبير الخط"
+              className="ghost quran-tool"
               style={{ flex: 1 }}
             >
               A+
@@ -259,7 +261,7 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="ابحث باسم السورة أو رقمها"
             aria-label="بحث في السور"
-            className="full"
+            className="search-input"
             style={{ marginBottom: 10 }}
           />
           <ul className="quran-list" style={{ listStyle: "none", padding: 0, margin: 0 }}>

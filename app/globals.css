@@ -266,3 +266,30 @@ body { font-size: 16px; }
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 section > h2 { font-size: 19px; margin: 8px 0 12px; }
+
+/* عناصر القرآن: بحث وأدوات قراءة بنفس هوية البطاقات */
+.search-input {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+}
+.search-input::placeholder { color: var(--muted); }
+.search-input:focus { border-color: var(--accent); }
+button.quran-tool {
+  min-height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-weight: 700;
+  font: inherit;
+  font-weight: 700;
+}
+button.quran-tool:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+button.quran-tool:disabled { opacity: 0.45; cursor: not-allowed; }
