@@ -10,6 +10,8 @@
   --warn: #f0b35a;
   --warn-bg: #2a2416;
   --error: #ff8a8a;
+  --accent-ink: #6fcf9c;
+  --accent-soft: rgba(47, 143, 99, 0.18);
   color-scheme: dark;
 }
 
@@ -24,6 +26,8 @@
   --warn: #8a5a00;
   --warn-bg: #fff6e0;
   --error: #b00020;
+  --accent-ink: #0f5132;
+  --accent-soft: rgba(15, 81, 50, 0.10);
   color-scheme: light;
 }
 
@@ -165,12 +169,40 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .source-note summary { cursor: pointer; font-size: 14px; color: var(--muted); }
 .source-note a { color: var(--accent); }
 
-@media (max-width: 480px) {
- .nav, .nav-sub { flex-wrap: wrap; overflow-x: visible; }
- .tab { min-width: 0; flex: 1 1 28%; }
- .chip { min-width: 0; flex: 1 1 28%; padding: 9px 6px; }
+/* أيقونات التبويبات: بتظهر على الموبايل بس */
+.tab-icon { display: none; }
+.tab-icon svg {
+  display: block; margin: 0 auto; width: 22px; height: 22px;
+  fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.tab-label { display: block; }
+
+/* الموبايل: شريط تنقّل ثابت تحت الشاشة، وترويسة أصغر */
+@media (max-width: 720px) {
+  .app { padding: 8px 14px calc(96px + env(safe-area-inset-bottom)); }
+  .brand { padding: 4px 2px 8px; }
+  .brand h1 { font-size: 18px; }
+  .brand-mark { width: 36px; height: 36px; font-size: 16px; }
+  .nav {
+    position: fixed; top: auto; left: 0; right: 0; bottom: 0;
+    margin: 0; padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+    background: var(--card); border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18);
+    overflow: visible; gap: 4px; z-index: 20;
+  }
+  .tab {
+    flex: 1 1 0; min-width: 0; min-height: 56px; padding: 6px 2px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    border: 0; border-radius: 12px; background: transparent; color: var(--muted);
+    font-size: 12px; line-height: 1.2;
+  }
+  .tab.active { background: var(--accent-soft); color: var(--accent-ink); border: 0; font-weight: 700; }
 }
 
+@media (max-width: 480px) {
+  .nav-sub { flex-wrap: wrap; overflow-x: visible; }
+  .chip { min-width: 0; flex: 1 1 28%; padding: 9px 6px; }
+}
 /* نص القرآن: خط Amiri Quran لنص الآيات فقط، والاحتياطي للباقي. */
 .quran-verses {
   font-family: "AmiriQuranTanzil", "Noto Naskh Arabic", system-ui, serif;

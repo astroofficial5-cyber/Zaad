@@ -18,6 +18,38 @@ const TABS = [
 
 type TabId = (typeof TABS)[number]["id"];
 
+const ICONS: Record<TabId, JSX.Element> = {
+  prayer: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
+    </svg>
+  ),
+  azkar: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="8" />
+      <circle cx="12" cy="12" r="2.5" />
+    </svg>
+  ),
+  quran: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v16H6.5A2.5 2.5 0 0 0 4 20.5z" />
+      <path d="M4 20.5V4.5" />
+    </svg>
+  ),
+  qibla: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M15.5 8.5l-2 5-5 2 2-5z" />
+    </svg>
+  ),
+  settings: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19 12a7 7 0 0 0-.1-1.2l2-1.5-2-3.4-2.3.9a7 7 0 0 0-2-1.2L14 3h-4l-.6 2.6a7 7 0 0 0-2 1.2l-2.3-.9-2 3.4 2 1.5A7 7 0 0 0 5 12a7 7 0 0 0 .1 1.2l-2 1.5 2 3.4 2.3-.9a7 7 0 0 0 2 1.2L10 21h4l.6-2.6a7 7 0 0 0 2-1.2l2.3.9 2-3.4-2-1.5c.1-.4.1-.8.1-1.2z" />
+    </svg>
+  ),
+};
+
 export default function Home() {
   const [tab, setTab] = useState<TabId>("prayer");
   // تغيير التبويب بيتسجل كخطوة في التاريخ، فزر الرجوع يرجع للتبويب السابق بدل ما يطلع من الموقع
@@ -98,7 +130,8 @@ export default function Home() {
             className={tab === t.id ? "tab active" : "tab"}
             onClick={() => goTab(t.id)}
           >
-            {t.label}
+            <span className="tab-icon" aria-hidden="true">{ICONS[t.id]}</span>
+            <span className="tab-label">{t.label}</span>
           </button>
         ))}
       </nav>
