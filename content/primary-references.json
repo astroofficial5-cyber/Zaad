@@ -121,5 +121,26 @@
     "url": "https://sunnah.com/muslim:2726",
     "verification": "checked-by-reviewer-on-sunnah.com",
     "verifiedAt": "2026-11-25T08:30:00Z"
+  },
+  "ms-ikhlas-3": {
+    "label": "سنن أبي داود، 5082؛ جامع الترمذي، 3575",
+    "url": "https://sunnah.com/abudawud:5082",
+    "note": "حكم الألباني كما في موقع sunnah.com: حسن (أبو داود 5082)؛ حكم دار السلام كما في sunnah.com: حسن (الترمذي 3575)",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T21:07:05Z"
+  },
+  "ms-falaq-3": {
+    "label": "سنن أبي داود، 5082؛ جامع الترمذي، 3575",
+    "url": "https://sunnah.com/abudawud:5082",
+    "note": "حكم الألباني كما في موقع sunnah.com: حسن (أبو داود 5082)؛ حكم دار السلام كما في sunnah.com: حسن (الترمذي 3575)",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T21:07:05Z"
+  },
+  "ms-nas-3": {
+    "label": "سنن أبي داود، 5082؛ جامع الترمذي، 3575",
+    "url": "https://sunnah.com/abudawud:5082",
+    "note": "حكم الألباني كما في موقع sunnah.com: حسن (أبو داود 5082)؛ حكم دار السلام كما في sunnah.com: حسن (الترمذي 3575)",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T21:07:05Z"
   }
 }
