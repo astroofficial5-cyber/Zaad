@@ -49,15 +49,15 @@
     "note": "هذا الأدب المفرد وليس صحيح البخاري. الصيغتان مطابقتان للنص المقروء؛ نسخة الترمذي3391 المقروءة تختلف في الكلمة الأخيرة."
   },
   "m-3": {
-    "label": "جامع الترمذي، 3388",
-    "url": "https://sunnah.com/tirmidhi:3388",
+    "label": "سنن أبي داود، 5088؛ جامع الترمذي، 3388؛ سنن ابن ماجه، 3869",
+    "url": "https://sunnah.com/abudawud:5088",
     "verification": "read-full-arabic-primary-book-report-online",
     "verifiedAt": "2026-11-23T11:54:44Z",
     "note": ""
   },
   "e-3": {
-    "label": "جامع الترمذي، 3388",
-    "url": "https://sunnah.com/tirmidhi:3388",
+    "label": "سنن أبي داود، 5088؛ جامع الترمذي، 3388؛ سنن ابن ماجه، 3869",
+    "url": "https://sunnah.com/abudawud:5088",
     "verification": "read-full-arabic-primary-book-report-online",
     "verifiedAt": "2026-11-23T11:54:44Z",
     "note": ""
@@ -79,13 +79,7 @@
   "ms-hasbiya-7": {
     "label": "سنن أبي داود، 5081 (موقوف على أبي الدرداء)",
     "url": "https://sunnah.com/abudawud:5081",
-    "note": "الألباني ضعّفه. هذا حكم منقول، والتطبيق لا يرجّح فيه.",
-    "verification": "checked-by-reviewer-on-sunnah.com",
-    "verifiedAt": "2026-11-25T07:23:59Z"
-  },
-  "ms-bismillah-3": {
-    "label": "سنن أبي داود، 5088؛ جامع الترمذي، 3388؛ سنن ابن ماجه، 3869",
-    "url": "https://sunnah.com/abudawud:5088",
+    "note": "حكم الألباني كما في موقع sunnah.com: موضوع. هذا حكم منقول، والتطبيق لا يرجّح فيه.",
     "verification": "checked-by-reviewer-on-sunnah.com",
     "verifiedAt": "2026-11-25T07:23:59Z"
   },
