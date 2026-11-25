@@ -1,5 +1,16 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+// خط الواجهة: Cairo (OFL) مستضاف مع الموقع نفسه، بدون طلبات لخوادم خارجية.
+const cairo = localFont({
+  src: "../public/fonts/Cairo-VF.woff",
+  weight: "400 700",
+  style: "normal",
+  display: "swap",
+  variable: "--font-cairo",
+  adjustFontFallback: false,
+});
 
 export const metadata: Metadata = {
   title: "زاد، الصلاة والقرآن والأذكار",
@@ -15,15 +26,8 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
-        />
-      </head>
+    <html lang="ar" dir="rtl" className={cairo.variable}>
+      <head />
       <body>{children}</body>
     </html>
   );
