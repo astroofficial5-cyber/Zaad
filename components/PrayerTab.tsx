@@ -249,7 +249,10 @@ export default function PrayerTab({
               <p style={{ margin: 0 }}>الصلاة القادمة</p>
               <p className="hero-name">{(PRAYER_NAMES as any)[next.key]}</p>
               <p className="hero-time" dir="ltr">
-                {new Date(next.at).toLocaleTimeString("ar-EG", { timeZone: tz!, hour: "2-digit", minute: "2-digit" })}
+                {(() => {
+                  const c = civilIn(tz!, next.at);
+                  return formatMinutes(c.hh * 60 + c.mm);
+                })()}
               </p>
               <p className="hero-count">باقي {formatCountdown(next.at - now)}</p>
             </div>
