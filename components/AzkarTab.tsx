@@ -107,14 +107,18 @@ function AzkarItem({ itemId }: { itemId: string }) {
 
   if (!approved) return null;
 
+  // بدون عدد (count = null): زر واحد «تمت القراءة» يتبدّل بين تم ولم يتم
+  const noCount = state.count === null;
+
   const bump = () => {
-    const next = Math.min(count + 1, state.count);
+    const next = noCount ? (count >= 1 ? 0 : 1) : Math.min(count + 1, state.count);
     setCount(next);
     try {
       localStorage.setItem(`azkar:hisn-v1:${todayKey()}:${itemId}`, String(next));
     } catch {
       // التخزين مش متاح؛ العداد بيفضل شغال لحد ما الصفحة تتقفل
     }
+    if (noCount) return; // بدون عدد: مفيش اهتزاز اكتمال مرتبط بعدد
     // اهتزاز خفيف عند كل ضغطة، واهتزاز مميز عند الاكتمال (لو الجهاز بيدعمه)
     try {
       if (typeof navigator !== "undefined" && typeof navigator.vibrate === "function") {
@@ -166,6 +170,16 @@ function AzkarItem({ itemId }: { itemId: string }) {
         )}
       </p>
       <div className="counter-row" style={{ flexDirection: "column", gap: 8 }}>
+        {noCount ? (
+          <button
+            className="primary"
+            onClick={bump}
+            aria-pressed={count >= 1}
+            style={{ width: "100%", minHeight: 96, fontSize: "1.5rem", fontWeight: 700 }}
+          >
+            {count >= 1 ? "✓ تمت القراءة" : "تمت القراءة"}
+          </button>
+        ) : (
         <button
           className="primary"
           onClick={bump}
@@ -182,6 +196,7 @@ function AzkarItem({ itemId }: { itemId: string }) {
             </span>
           )}
         </button>
+        )}
         <button
           className="ghost"
           onPointerDown={startLongPress}
