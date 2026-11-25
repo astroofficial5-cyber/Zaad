@@ -38,7 +38,7 @@ test('Revised text uses new counters without deleting prior local data',()=>{
 test('Primary references cover every selected item and distinguish Al-Adab Al-Mufrad',async()=>{
  const {default:refs}=await import('../content/primary-references.json',{with:{type:'json'}});
  assert.deepEqual(Object.keys(refs).sort(),records.map(r=>r.targetId).sort());
- for(const ref of Object.values(refs)) assert.equal(new URL(ref.url).hostname,'sunnah.com');
+ for(const [key,ref] of Object.entries(refs)) assert.equal(new URL(ref.url).hostname, key==='ap-ayat-kursi' ? 'dorar.net' : 'sunnah.com');
  assert.match(refs['e-2'].label,/الأدب المفرد/);
  assert.doesNotMatch(refs['e-2'].label,/صحيح البخاري|الترمذي/);
  assert.match(refs['ap-2'].label,/592/);
