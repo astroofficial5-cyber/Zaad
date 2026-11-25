@@ -71,6 +71,17 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
   }, []);
 
   // حفظ آخر آية ظاهرة أثناء القراءة، وإرجاع المستخدم لها عند "متابعة"
+  // زر الرجوع وأنا جوه سورة: يقفل السورة ويرجع للقائمة
+  useEffect(() => {
+    if (openSura === null || typeof window === "undefined") return;
+    const onPop = (e: PopStateEvent) => {
+      const st = e.state as { zaadQuran?: number } | null;
+      if (!st || !st.zaadQuran) setOpenSura(null);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [openSura]);
+
   useEffect(() => {
     if (openSura === null || typeof window === "undefined") return;
     const pending = pendingScroll.current;
@@ -120,7 +131,13 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
     });
   }
 
+  // فتح السورة خطوة في التاريخ، والرجوع منها يرجّع للقائمة
   function openSuraAt(n: number) {
+    try {
+      window.history.pushState({ zaadTab: "quran", zaadQuran: n }, "");
+    } catch {
+      /* مفيش تاريخ */
+    }
     setOpenSura(n);
     setLastSura(n);
     writeStored(LAST_KEY, String(n));
@@ -174,7 +191,16 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
       {sura ? (
         <>
           <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-            <button type="button" onClick={() => setOpenSura(null)} className="full" style={{ flex: 2 }}>
+            <button
+              type="button"
+              onClick={() => {
+                // لو السورة اتفتحت كخطوة، الرجوع بيقفلها عن طريق popstate
+                if (window.history.state && window.history.state.zaadQuran) window.history.back();
+                else setOpenSura(null);
+              }}
+              className="full"
+              style={{ flex: 2 }}
+            >
               رجوع إلى السور
             </button>
             <button

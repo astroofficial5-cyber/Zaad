@@ -20,10 +20,35 @@ type TabId = (typeof TABS)[number]["id"];
 
 export default function Home() {
   const [tab, setTab] = useState<TabId>("prayer");
+  // تغيير التبويب بيتسجل كخطوة في التاريخ، فزر الرجوع يرجع للتبويب السابق بدل ما يطلع من الموقع
+  function goTab(id: TabId) {
+    if (id === tab) return;
+    try {
+      window.history.pushState({ zaadTab: id }, "");
+    } catch {
+      /* التاريخ مش متاح: التبديل بيشتغل عادي */
+    }
+    setTab(id);
+  }
   const [settings, setSettings] = useState<any>(DEFAULT_SETTINGS);
   const [ready, setReady] = useState(false);
   // المكان متخزن هنا عشان كل التبويبات (الصلاة والقبلة) تشوف نفس التغيير فوراً
   const [place, setPlace] = useState<any>(null);
+
+  // زر الرجوع في الموبايل: يرجع خطوة داخل الموقع
+  useEffect(() => {
+    try {
+      window.history.replaceState({ zaadTab: "prayer" }, "");
+    } catch {
+      /* مفيش تاريخ */
+    }
+    const onPop = (e: PopStateEvent) => {
+      const st = e.state as { zaadTab?: TabId } | null;
+      if (st && st.zaadTab) setTab(st.zaadTab);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   useEffect(() => {
     setSettings(loadSettings());
@@ -71,7 +96,7 @@ export default function Home() {
             role="tab"
             aria-selected={tab === t.id}
             className={tab === t.id ? "tab active" : "tab"}
-            onClick={() => setTab(t.id)}
+            onClick={() => goTab(t.id)}
           >
             {t.label}
           </button>
@@ -88,7 +113,7 @@ export default function Home() {
           />
           <AzkarTab hidden={tab !== "azkar"} />
           <QuranTextTab hidden={tab !== "quran"} />
-          <QiblaTab place={place} onGoToPrayer={() => setTab("prayer")} hidden={tab !== "qibla"} />
+          <QiblaTab place={place} onGoToPrayer={() => goTab("prayer")} hidden={tab !== "qibla"} />
           {tab === "settings" && <SettingsTab settings={settings} onChange={update} />}
         </>
       )}
