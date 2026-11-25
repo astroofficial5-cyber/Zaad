@@ -46,7 +46,7 @@ test("مصدر حصن المسلم متحقق وحقوق النشر العام �
   assert.equal(s.rightsStatus, "public-reuse-unresolved-private-review-only");
 });
 
-test("خمسة سجلات لأذكار ما بعد الصلاة منقولة ومراجعة", () => {
+test("ثمانية سجلات لأذكار ما بعد الصلاة منقولة ومراجعة", () => {
   const afterPrayer = records.filter((r) => r.targetId && r.targetId.startsWith("ap-"));
-  assert.equal(afterPrayer.length, 5);
+  assert.equal(afterPrayer.length, 8);
 });

@@ -96,7 +96,7 @@ test('مراجعة بنشر مُفعّل أو بغير نطاق محلي لا ت
 test('الملف: كل العناصر معطلة، ولا يوجد نشر، والسجلات الـ11 الأصلية كما هي، والدفعتان الثانية والثالثة مضافتان بعدها', () => {
   assert.equal(matrix.enabled, false);
   assert.ok(matrix.items.length === 44 && matrix.items.every((i) => i.enabled === false));
-  assert.equal(records.length, 21);
+  assert.equal(records.length, 24);
   assert.ok(localLog.every((e) => e.publicationCleared === false && e.scope === LOCAL_SCOPE));
 });
 
