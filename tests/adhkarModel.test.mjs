@@ -93,10 +93,10 @@ test('مراجعة بنشر مُفعّل أو بغير نطاق محلي لا ت
   assert.equal(localReviewFor(entry.recordId, [{ ...entry, checks: { textMatchesOriginal: false } }]), null);
 });
 
-test('الملف: كل العناصر معطلة، ولا يوجد نشر، والسجلات الـ11 الأصلية كما هي، والدفعة الثانية (5) مضافة بعدها', () => {
+test('الملف: كل العناصر معطلة، ولا يوجد نشر، والسجلات الـ11 الأصلية كما هي، والدفعتان الثانية والثالثة مضافتان بعدها', () => {
   assert.equal(matrix.enabled, false);
   assert.ok(matrix.items.length === 44 && matrix.items.every((i) => i.enabled === false));
-  assert.equal(records.length, 15);
+  assert.equal(records.length, 18);
   assert.ok(localLog.every((e) => e.publicationCleared === false && e.scope === LOCAL_SCOPE));
 });
 

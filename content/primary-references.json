@@ -101,5 +101,25 @@
     "note": "في رواية البخاري (6307): «أكثر من سبعين مرة»، وهذا اختلاف في الرواية، والعدد المعتمد مائة من مسلم (2702).",
     "verification": "checked-by-reviewer-on-sunnah.com",
     "verifiedAt": "2026-11-25T07:23:59Z"
+  },
+  "ms-ashhadk-4-m": {
+    "label": "سنن أبي داود، 5069 (ترقيم sunnah.com)؛ الكتاب المطبوع: 5071",
+    "url": "https://sunnah.com/abudawud:5069",
+    "note": "حكم الألباني كما في موقع sunnah.com: ضعيف",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T08:30:00Z"
+  },
+  "ms-afini-3": {
+    "label": "سنن أبي داود، 5090 (ترقيم sunnah.com)؛ الكتاب المطبوع: 5092",
+    "url": "https://sunnah.com/abudawud:5090",
+    "note": "حكم الألباني كما في موقع sunnah.com: حسن الإسناد",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T08:30:00Z"
+  },
+  "ms-khalqihi-3-m": {
+    "label": "صحيح مسلم، 2726 (ترقيم sunnah.com؛ الكتاب المطبوع: 2726)",
+    "url": "https://sunnah.com/muslim:2726",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T08:30:00Z"
   }
 }

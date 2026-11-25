@@ -21,9 +21,9 @@
         "image": "p41.png",
         "placement": "الحاشية 4 بعد «ثلاث مرات»"
       },
-      "status": "rejected-or-held",
+      "status": "accepted-batch-3 (ms-afini-3)",
       "notes": "—",
-      "decisionNote": "عافني في بدني: رقم 5092 غير متأكد منه على sunnah.com، فلا يُكتب مرجع. معلّق."
+      "decisionNote": "مقبول في الدفعة 3: أبو داود 5090 على sunnah.com، والمطبوع 5092؛ الحكم كما في sunnah.com: حسن الإسناد."
     },
     {
       "bodyIndex": 138,
@@ -140,9 +140,8 @@
       "readFrom": {
         "image": "p40.png"
       },
-      "status": "held",
-      "holdReason": "المطبوع في الحاشية 3 (p40.png) يذكر أبو داود 5071، ومراجعتك تقول 5069. لم أستطع تحديد الصواب من الصورة، فلا يُكتب مرجع.",
-      "decisionNote": "معلّق حتى يتأكد المرجع أو العدد؛ لا يُكتب مرجع الآن."
+      "status": "accepted-batch-3 (ms-ashhadk-4-m)",
+      "decisionNote": "مقبول في الدفعة 3: أبو داود 5069 على sunnah.com، والمطبوع 5071؛ الحكم كما في sunnah.com: ضعيف."
     },
     {
       "bodyIndex": 146,
@@ -164,9 +163,8 @@
       "readFrom": {
         "image": "p46.png"
       },
-      "status": "held",
-      "holdReason": "الحاشية 2 بعد الذكر هي «المرجع السابق»، ولا يوجد مرجع مطبوع لهذا الذكر في الصفحة.",
-      "decisionNote": "معلّق حتى يتأكد المرجع أو العدد؛ لا يُكتب مرجع الآن."
+      "status": "accepted-batch-3 (ms-khalqihi-3-m)",
+      "decisionNote": "مقبول في الدفعة 3: مسلم 2726، من غير حكم."
     },
     {
       "bodyIndex": 153,

@@ -193,5 +193,44 @@
     },
     "scope": "reviewer-comparison-with-printed-source-and-sunnah",
     "note": "مراجعة يدوية: مقارنة النص والعدد بنص صفحة رسالة الحرمين، والمرجع على sunnah.com. لا تحكم على صحة الحديث. الحقوق: لم تُحسم، والشروط الفعلية للموقع غير مقروءة؛ المراجعة ليست إذنا عاما بالنشر."
+  },
+  {
+    "recordId": "hisn-ms-ashhadk-4-m-v1",
+    "reviewer": "مساعد حسن",
+    "reviewedAt": "2026-11-25T08:30:00Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "reviewer-comparison-with-printed-source-and-sunnah",
+    "note": "مراجعة يدوية: مقارنة النص والعدد بنص صفحة رسالة الحرمين، والمرجع على sunnah.com. لا تحكم على صحة الحديث. الحقوق: لم تُحسم، والشروط الفعلية للموقع غير مقروءة؛ المراجعة ليست إذنا عاما بالنشر."
+  },
+  {
+    "recordId": "hisn-ms-afini-3-v1",
+    "reviewer": "مساعد حسن",
+    "reviewedAt": "2026-11-25T08:30:00Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "reviewer-comparison-with-printed-source-and-sunnah",
+    "note": "مراجعة يدوية: مقارنة النص والعدد بنص صفحة رسالة الحرمين، والمرجع على sunnah.com. لا تحكم على صحة الحديث. الحقوق: لم تُحسم، والشروط الفعلية للموقع غير مقروءة؛ المراجعة ليست إذنا عاما بالنشر."
+  },
+  {
+    "recordId": "hisn-ms-khalqihi-3-m-v1",
+    "reviewer": "مساعد حسن",
+    "reviewedAt": "2026-11-25T08:30:00Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "reviewer-comparison-with-printed-source-and-sunnah",
+    "note": "مراجعة يدوية: مقارنة النص والعدد بنص صفحة رسالة الحرمين، والمرجع على sunnah.com. لا تحكم على صحة الحديث. الحقوق: لم تُحسم، والشروط الفعلية للموقع غير مقروءة؛ المراجعة ليست إذنا عاما بالنشر."
   }
 ]
