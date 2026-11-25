@@ -75,5 +75,37 @@
     "verification": "read-full-arabic-primary-book-report-online",
     "verifiedAt": "2026-11-23T11:54:44Z",
     "note": ""
+  },
+  "ms-hasbiya-7": {
+    "label": "سنن أبي داود، 5081 (موقوف على أبي الدرداء)",
+    "url": "https://sunnah.com/abudawud:5081",
+    "note": "الألباني ضعّفه. هذا حكم منقول، والتطبيق لا يرجّح فيه.",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T07:23:59Z"
+  },
+  "ms-bismillah-3": {
+    "label": "سنن أبي داود، 5088؛ جامع الترمذي، 3388؛ سنن ابن ماجه، 3869",
+    "url": "https://sunnah.com/abudawud:5088",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T07:23:59Z"
+  },
+  "ms-radeet-3": {
+    "label": "جامع الترمذي، 3389",
+    "url": "https://sunnah.com/tirmidhi:3389",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T07:23:59Z"
+  },
+  "ms-tahlil-100-sabah": {
+    "label": "صحيح البخاري، 3293؛ صحيح مسلم، 2691",
+    "url": "https://sunnah.com/bukhari:3293",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T07:23:59Z"
+  },
+  "ms-istighfar-100": {
+    "label": "صحيح مسلم، 2702",
+    "url": "https://sunnah.com/muslim:2702",
+    "note": "في رواية البخاري (6307): «أكثر من سبعين مرة»، وهذا اختلاف في الرواية، والعدد المعتمد مائة من مسلم (2702).",
+    "verification": "checked-by-reviewer-on-sunnah.com",
+    "verifiedAt": "2026-11-25T07:23:59Z"
   }
 }

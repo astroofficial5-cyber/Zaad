@@ -151,6 +151,7 @@ function AzkarItem({ itemId }: { itemId: string }) {
     <div className="card">
       <p className="ayah-text">{state.text}</p>
       <p className="muted">{state.countNote}</p>
+      {state.primaryNote && <p className="muted">{state.primaryNote}</p>}
       {itemId === "ap-1" && <p className="muted">لفظ الاستغفار مبيَّن في شرح الأوزاعي داخل الرواية.</p>}
       {itemId === "ap-3" && <p className="muted">ورد التهليل مع الدعاء التالي في صحيح مسلم، 593، دون عدد؛ فُصلا هنا للعدّ فقط.</p>}
       <p className="muted">
