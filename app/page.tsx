@@ -143,6 +143,7 @@ export default function Home() {
             place={place}
             onPlaceChange={setPlace}
             hidden={tab !== "prayer"}
+            onNavigate={(id) => goTab(id as TabId)}
           />
           <AzkarTab hidden={tab !== "azkar"} />
           <QuranTextTab hidden={tab !== "quran"} />
