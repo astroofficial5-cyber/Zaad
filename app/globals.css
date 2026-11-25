@@ -331,3 +331,6 @@ select, input[type="number"], input[type="text"], input[type="url"], input:not([
 .badge-next { background: var(--accent); color: var(--accent-text); }
 .badge-current { background: var(--border); color: var(--muted); }
 button.full { width: 100%; margin: 8px 0; }
+
+/* مرجع التصميم: عناوين البطل ونصوصه بحد أقصى 680px */
+.hero .hero-name, .hero .hero-count, .hero .hero-time { max-width: 680px; margin-inline: auto; }
