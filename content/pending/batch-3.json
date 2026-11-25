@@ -1,5 +1,5 @@
 {
-  "status": "pending-review: غير مربوط بالتطبيق ولا بـ records/index.json",
+  "status": "pending-review: مطابقة يدوية من المراجع. غير مربوط بالتطبيق ولا بـ records/index.json، ولا يُدمج قبل موافقة صريحة.",
   "records": [
     {
       "id": "hisn-ms-ashhadk-4-m-v1",
@@ -14,7 +14,7 @@
       "fetchedAt": "2026-11-25T07:32:23Z",
       "importedBy": "hisn-source-extraction",
       "countNote": "أربع مرات كما في نص الكتاب.",
-      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، مع مقارنة الصورة المطبوعة للعدد والمرجع. لم تُراجع بعد."
+      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، ومقارنة الصورة المطبوعة للعدد والمرجع، ومراجع sunnah.com للأرقام. لم يُكتب أي حكم على الذكر نفسه."
     },
     {
       "id": "hisn-ms-afini-3-v1",
@@ -29,7 +29,7 @@
       "fetchedAt": "2026-11-25T07:32:23Z",
       "importedBy": "hisn-source-extraction",
       "countNote": "ثلاث مرات كما في نص الكتاب.",
-      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، مع مقارنة الصورة المطبوعة للعدد والمرجع. لم تُراجع بعد."
+      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، ومقارنة الصورة المطبوعة للعدد والمرجع، ومراجع sunnah.com للأرقام. لم يُكتب أي حكم على الذكر نفسه."
     },
     {
       "id": "hisn-ms-khalqihi-3-m-v1",
@@ -44,28 +44,29 @@
       "fetchedAt": "2026-11-25T07:32:23Z",
       "importedBy": "hisn-source-extraction",
       "countNote": "ثلاث مرات إذا أصبح، كما في نص الكتاب.",
-      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، مع مقارنة الصورة المطبوعة للعدد والمرجع. لم تُراجع بعد."
+      "transcriptionNote": "نقل حرفي من نص صفحة رسالة الحرمين، ومقارنة الصورة المطبوعة للعدد والمرجع، ومراجع sunnah.com للأرقام. لم يُكتب أي حكم على الذكر نفسه."
     }
   ],
   "primaryReferences": {
     "ms-ashhadk-4-m": {
-      "label": "سنن أبي داود، 5069 (ترقيم sunnah.com)؛ الكتاب مطبوع 5071",
+      "label": "سنن أبي داود، 5069 (ترقيم sunnah.com)؛ الكتاب المطبوع: 5071",
       "url": "https://sunnah.com/abudawud:5069",
-      "verification": "pending-reviewer-sunnah-check",
-      "verifiedAt": "2026-11-25T07:32:23Z",
-      "note": "ضعّفه الألباني حسب مراجعة المصدر؛ لفظ حكمه على sunnah.com يُؤكَّد قبل النشر."
+      "note": "حكم الألباني كما في موقع sunnah.com: ضعيف",
+      "verification": "checked-by-reviewer-on-sunnah.com",
+      "verifiedAt": "2026-11-25T08:30:00Z"
     },
     "ms-afini-3": {
-      "label": "سنن أبي داود، 5090 (ترقيم sunnah.com)؛ الكتاب مطبوع 5092",
+      "label": "سنن أبي داود، 5090 (ترقيم sunnah.com)؛ الكتاب المطبوع: 5092",
       "url": "https://sunnah.com/abudawud:5090",
-      "verification": "pending-reviewer-sunnah-check",
-      "verifiedAt": "2026-11-25T07:32:23Z"
+      "note": "حكم الألباني كما في موقع sunnah.com: حسن الإسناد",
+      "verification": "checked-by-reviewer-on-sunnah.com",
+      "verifiedAt": "2026-11-25T08:30:00Z"
     },
     "ms-khalqihi-3-m": {
-      "label": "صحيح مسلم، 2726",
+      "label": "صحيح مسلم، 2726 (ترقيم sunnah.com؛ الكتاب المطبوع: 2726)",
       "url": "https://sunnah.com/muslim:2726",
-      "verification": "pending-reviewer-sunnah-check",
-      "verifiedAt": "2026-11-25T07:32:23Z"
+      "verification": "checked-by-reviewer-on-sunnah.com",
+      "verifiedAt": "2026-11-25T08:30:00Z"
     }
   },
   "sections": {
