@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type ReactElement } from "react";
+import { loadUiFont } from "../lib/uiFont.js";
 import PrayerTab from "../components/PrayerTab";
 import AzkarTab from "../components/AzkarTab";
 import QuranTextTab from "../components/QuranTextTab";
@@ -68,6 +69,10 @@ export default function Home() {
   const [place, setPlace] = useState<any>(null);
 
   // زر الرجوع في الموبايل: يرجع خطوة داخل الموقع
+  useEffect(() => {
+    loadUiFont();
+  }, []);
+
   useEffect(() => {
     try {
       window.history.replaceState({ zaadTab: "prayer" }, "");

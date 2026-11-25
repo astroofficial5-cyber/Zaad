@@ -35,7 +35,7 @@
 
 /* خط الواجهة: Cairo من Google Fonts، ولو مش متاح (أوفلاين) بيقع على الاحتياطي. */
 :root {
-  --font-ui: var(--font-cairo), system-ui, "Segoe UI", Tahoma, "Noto Naskh Arabic", sans-serif;
+  --font-ui: "Cairo", system-ui, "Segoe UI", Tahoma, "Noto Naskh Arabic", sans-serif;
   /* خط الأذكار كما كان بالضبط، ممنوع تغييره من خط الواجهة */
   --font-text-legacy: system-ui, "Segoe UI", Tahoma, "Noto Naskh Arabic", sans-serif;
 }
