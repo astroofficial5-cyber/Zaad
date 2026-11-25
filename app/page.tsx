@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactElement } from "react";
 import PrayerTab from "../components/PrayerTab";
 import AzkarTab from "../components/AzkarTab";
 import QuranTextTab from "../components/QuranTextTab";
@@ -18,7 +18,7 @@ const TABS = [
 
 type TabId = (typeof TABS)[number]["id"];
 
-const ICONS: Record<TabId, JSX.Element> = {
+const ICONS: Record<TabId, ReactElement> = {
   prayer: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
