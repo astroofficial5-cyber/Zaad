@@ -245,3 +245,16 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .list-title { flex: 1; font-weight: 600; }
 .list-meta { color: var(--muted); font-size: 13px; white-space: nowrap; }
 .list-chev { color: var(--muted); font-size: 22px; line-height: 1; }
+
+/* الموقع والخصوصية: مطوي افتراضياً عشان المواقيت تظهر أول */
+details.privacy > summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 14px;
+  list-style: none;
+  min-height: 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+details.privacy > summary::-webkit-details-marker { display: none; }
+details.privacy > summary::after { content: "＋"; color: var(--muted); }
+details.privacy[open] > summary::after { content: "−"; }

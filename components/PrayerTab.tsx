@@ -303,8 +303,9 @@ function PlaceSetup({ current, onSave, onCancel }: { current: any; onSave: (p: a
         </div>
       </div>
 
-      <div className="privacy">
-        <p style={{ margin: 0 }}>
+      <details className="privacy">
+        <summary>الموقع والخصوصية</summary>
+        <p style={{ margin: "8px 0 0" }}>
           لو تحب، نقدر نحدد موقعك التقريبي تلقائياً. مش هنطلب الموقع غير لما تضغط الزر ده. الإحداثيات بتتحفظ على جهازك،
           وبتتبعت لخدمة Aladhan عشان تحسب المواقيت، ومفيش حساب أو تسجيل.
         </p>
@@ -312,7 +313,7 @@ function PlaceSetup({ current, onSave, onCancel }: { current: any; onSave: (p: a
           استخدم موقعي الحالي
         </button>
         {gpsMsg && <p className="muted" style={{ margin: "6px 0 0" }}>{gpsMsg}</p>}
-      </div>
+      </details>
 
       <button className="ghost full" style={{ marginTop: 12 }} onClick={() => setShowManual((s) => !s)}>
         {showManual ? "إخفاء الإدخال اليدوي" : "إدخال الإحداثيات يدوياً"}
