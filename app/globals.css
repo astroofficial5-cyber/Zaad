@@ -33,9 +33,16 @@
 
 * { box-sizing: border-box; }
 
+/* خط الواجهة: Cairo من Google Fonts، ولو مش متاح (أوفلاين) بيقع على الاحتياطي. */
+:root {
+  --font-ui: "Cairo", system-ui, "Segoe UI", Tahoma, "Noto Naskh Arabic", sans-serif;
+  /* خط الأذكار كما كان بالضبط، ممنوع تغييره من خط الواجهة */
+  --font-text-legacy: system-ui, "Segoe UI", Tahoma, "Noto Naskh Arabic", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, "Segoe UI", Tahoma, "Noto Naskh Arabic", sans-serif;
+  font-family: var(--font-ui);
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -157,7 +164,7 @@ select, input[type="number"], input[type="text"], input:not([type]) {
 button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible {
   outline: 3px solid var(--accent); outline-offset: 2px;
 }
-.ayah-text { font-size: 22px; line-height: 2; margin: 0 0 8px; }
+.ayah-text { font-size: 22px; line-height: 2; margin: 0 0 8px; font-family: var(--font-text-legacy); }
 
 @media (min-width: 900px) {
   .app { padding: 24px; }
