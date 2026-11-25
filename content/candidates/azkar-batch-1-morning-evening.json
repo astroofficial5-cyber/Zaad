@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "sourcePage": "https://risala.prh.gov.sa/ar/content/51",
+    "sourceSha256_pdf": "2cf50bfa08f476509668c5b801d9f1d5f3aa247291555e3a1bfcf25861ecf62e",
+    "chapters": [
+      "27"
+    ],
+    "scope": "أذكار الصباح والمساء: الدفعة الأولى، بدون آيات القرآن ولا الأذكار التي لا يذكر المصدر لها عددا",
+    "note": "ملف مرشّح للمراجعة فقط؛ غير مرتبط بـ records/index.json ولا يُعرض في التطبيق. قبل النشر تحتاج كل سجلات proposed-flag مطابقة لصور الصفحة، وإضافة مراجعة مستقلة في review-log.json."
+  },
+  "items": [
+    {
+      "bodyIndex": 135,
+      "arabicText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ",
+      "count": 4,
+      "countSourceText": "أَرْبَعَ مَرَّاتٍ",
+      "primaryReferences": [
+        "سنن أبي داود، 5071"
+      ],
+      "anchorNoteUsed": 105,
+      "anchorMatchesText": true,
+      "status": "proposed",
+      "variations": "الأدب المفرد وعمل اليوم والليلة (غير أمهات الكتب) يذكران الحديث نفسه؛ لا تخالف في العدد المذكور.",
+      "holdReason": null
+    },
+    {
+      "bodyIndex": 137,
+      "arabicText": "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ",
+      "count": 3,
+      "countSourceText": "ثَلاثَ مرَّاتٍ",
+      "primaryReferences": [
+        "سنن أبي داود، 5092",
+        "مسند أحمد، 20430"
+      ],
+      "anchorNoteUsed": 108,
+      "anchorMatchesText": false,
+      "status": "proposed-flag",
+      "variations": null,
+      "holdReason": "الحاشية المربوطة بالنص (109) تخص ذكر «حسبي الله» (سبع مرات)، فالمرجع هنا مأخوذ من الحاشية 108 التي تطابق النص؛ يحتاج تأكيدك من صورة الصفحة."
+    },
+    {
+      "bodyIndex": 138,
+      "arabicText": "حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ العَرْشِ العَظِيمِ",
+      "count": 7,
+      "countSourceText": "سَبْعَ مَرَّاتٍ",
+      "primaryReferences": [
+        "سنن أبي داود، 5074",
+        "سنن ابن ماجه، 3871"
+      ],
+      "anchorNoteUsed": 110,
+      "anchorMatchesText": true,
+      "status": "proposed",
+      "variations": "الحاشية 109 تروي العدد سبعا مرفوعا (ابن السني، 71) وموقوفا (أبو داود، 5081)، والعدد واحد في الروايتين.",
+      "holdReason": null
+    },
+    {
+      "bodyIndex": 141,
+      "arabicText": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ العَلِيمُ",
+      "count": 3,
+      "countSourceText": "ثَلاثَ مرَّاتٍ",
+      "primaryReferences": [
+        "سنن أبي داود، 5088",
+        "جامع الترمذي، 3388",
+        "سنن ابن ماجه، 3869"
+      ],
+      "anchorNoteUsed": 113,
+      "anchorMatchesText": false,
+      "status": "proposed-flag",
+      "variations": null,
+      "holdReason": "الحاشية المربوطة (113) تخص «رضيت بالله»، فالمرجع مأخوذ من الحاشية 112 التي تطابق النص؛ يحتاج تأكيدك."
+    },
+    {
+      "bodyIndex": 142,
+      "arabicText": "رَضِيتُ بِاللَّهِ رَبًَّا، وَبِالإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ ﷺ نَبِيًّا",
+      "count": 3,
+      "countSourceText": "ثَلاثَ مرَّاتٍ",
+      "primaryReferences": [
+        "مسند أحمد، 18967",
+        "سنن أبي داود، 1531",
+        "جامع الترمذي، 3389"
+      ],
+      "anchorNoteUsed": 114,
+      "anchorMatchesText": false,
+      "status": "proposed-flag",
+      "variations": null,
+      "holdReason": "الحاشية المربوطة (114) للحاكم، والحديث الموافق للنص هو الحاشية 113؛ يحتاج تأكيدك."
+    },
+    {
+      "bodyIndex": 147,
+      "arabicText": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "count": 10,
+      "countSourceText": "عشرَ مرَّات، أَوْ مرَّةً واحدةً عِنْدَ الكَسَلِ",
+      "primaryReferences": [
+        "سنن أبي داود، 5077",
+        "سنن ابن ماجه، 3798",
+        "مسند أحمد، 8719"
+      ],
+      "anchorNoteUsed": 122,
+      "anchorMatchesText": true,
+      "status": "proposed",
+      "variations": "النص نفسه يذكر بديلا: «أو مرة واحدة عند الكسل». العدد المعتمد عشر.",
+      "holdReason": null
+    },
+    {
+      "bodyIndex": 148,
+      "arabicText": "لَا إِلَهَ إِلَّا اللَّهُ، وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "count": 100,
+      "countSourceText": "مِائَةَ مرَّةٍ إذا أَصْبَحَ",
+      "primaryReferences": [
+        "صحيح البخاري، 3293",
+        "صحيح مسلم، 2691"
+      ],
+      "anchorNoteUsed": 123,
+      "anchorMatchesText": false,
+      "status": "proposed-flag",
+      "variations": "الحاشية 123 تروي العدد مائة في يوم، وتذكر البخاري 3293 ومسلم 2691.",
+      "holdReason": "الحاشية المربوطة (124) تحيل إلى مسلم 2726 ولا تطابق النص؛ المرجع من الحاشية 123. يحتاج تأكيدك."
+    },
+    {
+      "bodyIndex": 149,
+      "arabicText": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ",
+      "count": 3,
+      "countSourceText": "ثَلاثَ مَرَّاتٍ إِذا أَصْبَحَ",
+      "primaryReferences": [
+        "سنن ابن ماجه، 925"
+      ],
+      "anchorNoteUsed": 125,
+      "anchorMatchesText": true,
+      "status": "proposed",
+      "variations": "الحاشية تذكر أن الحديث تقدّم برقم 73؛ لا تخالف في العدد.",
+      "holdReason": null
+    },
+    {
+      "bodyIndex": 151,
+      "arabicText": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",
+      "count": 100,
+      "countSourceText": "مِائَةَ مَرَّةٍ فِي اليَوْمِ",
+      "primaryReferences": [
+        "صحيح البخاري، 6307",
+        "صحيح مسلم، 2702"
+      ],
+      "anchorNoteUsed": 126,
+      "anchorMatchesText": false,
+      "status": "proposed-flag",
+      "variations": null,
+      "holdReason": "الحاشية المربوطة (127) لا تطابق النص؛ المرجع من الحاشية 126 التي تطابقه. يحتاج تأكيدك."
+    },
+    {
+      "bodyIndex": 152,
+      "arabicText": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+      "count": 3,
+      "countSourceText": "ثَلاثَ مَرَّاتٍ إِذَا أَمْسَى",
+      "primaryReferences": [
+        "مسند أحمد، 7898"
+      ],
+      "anchorNoteUsed": 127,
+      "anchorMatchesText": false,
+      "status": "proposed-flag",
+      "variations": null,
+      "holdReason": "الحاشية المربوطة (128) لا تطابق النص؛ المرجع من الحاشية 127 التي تطابقه. يحتاج تأكيدك."
+    },
+    {
+      "bodyIndex": 146,
+      "arabicText": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+      "count": 100,
+      "countSourceText": "مِائَةَ مرَّةٍ",
+      "primaryReferences": [],
+      "anchorNoteUsed": 121,
+      "anchorMatchesText": true,
+      "status": "held",
+      "variations": null,
+      "holdReason": "الحاشية 121 تحيل إلى عمل اليوم والليلة وكتب شرح، وليس إلى أمهات الكتب."
+    },
+    {
+      "bodyIndex": 153,
+      "arabicText": "اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبَيِّنَا مُحَمَّدٍ",
+      "count": 10,
+      "countSourceText": "عَشْرَ مَرَّاتٍ",
+      "primaryReferences": [],
+      "anchorNoteUsed": 129,
+      "anchorMatchesText": false,
+      "status": "held",
+      "variations": null,
+      "holdReason": "الحاشية المربوطة (129) لا تطابق النص؛ الحديث الموافق في الحاشية 128 يرويه الطبراني ويحيل إلى مجمع الزوائد، فلا يصلح مرجعا من أمهات الكتب."
+    }
+  ]
+}
