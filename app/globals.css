@@ -258,3 +258,11 @@ details.privacy > summary {
 details.privacy > summary::-webkit-details-marker { display: none; }
 details.privacy > summary::after { content: "＋"; color: var(--muted); }
 details.privacy[open] > summary::after { content: "−"; }
+
+/* تفاصيل عامة: خط أوضح، وظل خفيف للبطاقات، وفواصل أهدى بين الأقسام */
+body { font-size: 16px; }
+.card {
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+section > h2 { font-size: 19px; margin: 8px 0 12px; }
