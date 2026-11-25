@@ -275,13 +275,12 @@ export default function QuranTextTab({ hidden }: { hidden: boolean }) {
                 <button
                   type="button"
                   onClick={() => openSuraAt(s.n)}
-                  className="full"
-                  style={{ display: "flex", justifyContent: "space-between", margin: "0 0 8px" }}
+                  className="list-row"
                 >
-                  <span>
-                    {toArabicDigits(s.n)}. سورة {s.name}
-                  </span>
-                  <span className="muted">{toArabicDigits(s.ayas.length)} آية</span>
+                  <span className="list-num">{toArabicDigits(s.n)}</span>
+                  <span className="list-title">سورة {s.name}</span>
+                  <span className="list-meta">{toArabicDigits(s.ayas.length)} آية</span>
+                  <span className="list-chev" aria-hidden="true">‹</span>
                 </button>
               </li>
             ))}
