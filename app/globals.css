@@ -293,3 +293,13 @@ button.quran-tool {
 }
 button.quran-tool:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
 button.quran-tool:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* أهداف اللمس: اختيارات الراديو والمربعات وحقول الإدخال أكبر على الموبايل */
+input[type="radio"], input[type="checkbox"] {
+  width: 22px; height: 22px; flex: none;
+  margin: 0 0 0 8px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+label.row { min-height: 48px; cursor: pointer; }
+select, input[type="number"], input[type="text"], input[type="url"], input:not([type]) { min-height: 44px; }
