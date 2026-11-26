@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { readProgress, resetProgress, writeProgress } from "../lib/azkarProgress.js";
 import { AZKAR_SECTIONS, SECTION_SOURCES } from "../lib/azkarData.js";
 import { getAzkarState } from "../lib/approvedContent.js";
 import AzkarCandidates, { CANDIDATES_ENABLED, CANDIDATES_TAB_LABEL } from "./AzkarCandidatesRuntime";
@@ -62,7 +63,7 @@ export default function AzkarTab({ hidden }: { hidden: boolean }) {
                 مختارات من الأذكار، وليست كل أذكار القسم. المرجع أسفل كل ذكر هو كتاب الحديث ورقمه.
               </p>
               {approvedIds.map((id) => (
-                <AzkarItem key={id} itemId={id} />
+                <AzkarItem key={id} itemId={id} sectionId={section.id} />
               ))}
             </>
           )}
@@ -86,7 +87,7 @@ export default function AzkarTab({ hidden }: { hidden: boolean }) {
   );
 }
 
-function AzkarItem({ itemId }: { itemId: string }) {
+function AzkarItem({ itemId, sectionId }: { itemId: string; sectionId: string }) {
   const state = getAzkarState(itemId);
   const [count, setCount] = useState(0);
   const approved = state.status === "approved";
@@ -94,11 +95,11 @@ function AzkarItem({ itemId }: { itemId: string }) {
   useEffect(() => {
     if (!approved) return;
     try {
-      setCount(Number(localStorage.getItem(`azkar:hisn-v1:${todayKey()}:${itemId}`) || 0));
+      setCount(readProgress(localStorage, todayKey(), sectionId, itemId));
     } catch {
       setCount(0);
     }
-  }, [itemId, approved]);
+  }, [itemId, sectionId, approved]);
 
   // التصفير بالضغط المطوّل (ثانية) عشان ما يحصلش بالخطأ.
   // الـhooks لازم تتعرّف قبل أي return شرطي.
@@ -114,7 +115,7 @@ function AzkarItem({ itemId }: { itemId: string }) {
     const next = noCount ? (count >= 1 ? 0 : 1) : Math.min(count + 1, state.count);
     setCount(next);
     try {
-      localStorage.setItem(`azkar:hisn-v1:${todayKey()}:${itemId}`, String(next));
+      writeProgress(localStorage, todayKey(), sectionId, itemId, next);
     } catch {
       // التخزين مش متاح؛ العداد بيفضل شغال لحد ما الصفحة تتقفل
     }
@@ -132,7 +133,7 @@ function AzkarItem({ itemId }: { itemId: string }) {
   const reset = () => {
     setCount(0);
     try {
-      localStorage.removeItem(`azkar:hisn-v1:${todayKey()}:${itemId}`);
+      resetProgress(localStorage, todayKey(), sectionId, itemId);
     } catch {
       // مفيش تخزين متاح
     }

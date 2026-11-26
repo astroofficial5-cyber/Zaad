@@ -31,7 +31,7 @@ test('Printed repetition and continuation boundaries follow book-relative order'
 });
 test('Revised text uses new counters without deleting prior local data',()=>{
  const ui=readFileSync(new URL('../components/AzkarTab.tsx',import.meta.url),'utf8');
- assert.match(ui,/azkar:hisn-v1:/);
+ assert.match(ui,/azkar:hisn-v2:|lib\/azkarProgress/);
  assert.doesNotMatch(ui,/localStorage\.clear/);
 });
 
