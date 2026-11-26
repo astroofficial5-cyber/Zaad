@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { PRAYER_KEYS, PRAYER_NAMES, applyOffsets, currentPrayerKey, formatCountdown, formatMinutes, hijriLabel, parseTimeToMinutes } from "../lib/time.js";
+import { Fragment, useEffect, useMemo, useState } from "react";
+import { PRAYER_KEYS, PRAYER_NAMES, applyOffsets, currentPrayerKey, formatCountdown, formatMinutes, hijriLabel, parseTimeToMinutes, sunriseText } from "../lib/time.js";
 import { fetchPrayerData } from "../lib/prayerApi.js";
 import { savePlace } from "../lib/settings.js";
 import { CITIES, placeFromCity, validatePlace } from "../lib/places.js";
@@ -267,6 +267,7 @@ export default function PrayerTab({
             title="مواقيت اليوم"
             state={today}
             minutes={todayMinutes}
+            sunrise={today.status === "ok" ? sunriseText(today.data.timings) : null}
             marks={todayMarks}
             onRetry={() => setRetry((n) => n + 1)}
           />
@@ -315,12 +316,14 @@ function DayCard({
   state,
   minutes,
   marks,
+  sunrise,
   onRetry,
 }: {
   title: string;
   state: any;
   minutes: any;
   marks?: Record<string, string>;
+  sunrise?: string | null;
   onRetry: () => void;
 }) {
   return (
@@ -339,8 +342,8 @@ function DayCard({
       {minutes &&
         PRAYER_KEYS.map((key) => {
           const mark = marks?.[key];
-          return (
-            <div className={`row prayer-row${mark === "القادمة" ? " is-next" : ""}${mark === "الحالية" ? " is-current" : ""}`} key={key}>
+          const row = (
+            <div className={`row prayer-row${mark === "القادمة" ? " is-next" : ""}${mark === "الحالية" ? " is-current" : ""}`}>
               <span className="prayer-name">
                 {(PRAYER_NAMES as any)[key]}
                 {mark && <span className={`badge ${mark === "القادمة" ? "badge-next" : "badge-current"}`}>{mark}</span>}
@@ -348,6 +351,19 @@ function DayCard({
               <span className="prayer-time" dir="ltr">{minutes[key] === null ? "—" : formatMinutes(minutes[key])}</span>
             </div>
           );
+          // الشروق بين الفجر والظهر: صف أخف، مش صلاة (ما ليهوش علامة ولا يدخل في العد)
+          if (key === "Dhuhr" && sunrise) {
+            return (
+              <Fragment key={key}>
+                <div className="row sunrise-row">
+                  <span className="prayer-name">الشروق</span>
+                  <span className="prayer-time" dir="ltr">{sunrise}</span>
+                </div>
+                {row}
+              </Fragment>
+            );
+          }
+          return row;
         })}
     </div>
   );

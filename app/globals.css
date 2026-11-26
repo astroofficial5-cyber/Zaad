@@ -325,6 +325,8 @@ select, input[type="number"], input[type="text"], input[type="url"], input:not([
 .prayer-row { display: flex; justify-content: space-between; align-items: center; min-height: 48px; border-radius: 10px; padding: 0 8px; }
 .prayer-row.is-next { background: var(--accent-soft); }
 .prayer-row.is-current { opacity: 0.85; }
+.sunrise-row { display: flex; justify-content: space-between; align-items: center; min-height: 36px; padding: 0 8px; }
+.sunrise-row .prayer-name, .sunrise-row .prayer-time { font-size: 14px; color: var(--muted); font-weight: 400; }
 .prayer-name { display: flex; align-items: center; gap: 8px; font-weight: 600; }
 .prayer-time { font-variant-numeric: tabular-nums; font-weight: 700; }
 .badge { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
