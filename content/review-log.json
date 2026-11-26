@@ -418,5 +418,19 @@
     "scope": "reviewer-comparison-with-printed-source-and-sunnah",
     "note": "قورن النص المطبوع بصفحة sunnah.com مقطعًا مقطعًا بعد حذف التشكيل؛ التنفيذ البرمجي آلي؛ بدون مراجعة بشرية مستقلة وبدون اعتماد من صاحب المشروع",
     "rightsNote": "فحص المصدر والنص تم؛ لا يوجد ترخيص نشر من الجهة المالكة للطبعة، وحقوق النشر العام غير محسومة."
+  },
+  {
+    "recordId": "adab-1202-v1",
+    "reviewer": "مراجعة المصدر",
+    "reviewedAt": "2026-11-26T16:12:10Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "owner-full-page-reading-and-assistant-excerpt-match",
+    "note": "قرأ صاحب المشروع الصفحة كاملة بتاريخ 2026-11-26 وطابق نصها. المساعد طابق المقتطع الأول بالجلب فقط؛ بدون مراجعة بشرية مستقلة",
+    "rightsNote": "فحص المصدر والنص تم؛ لم يُفحص ترخيص sunnah.com، ولا يوجد ترخيص نشر معروف؛ حقوق النشر غير محسومة."
   }
 ]
