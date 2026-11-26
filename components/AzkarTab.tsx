@@ -18,6 +18,11 @@ function todayKey() {
 
 const CANDIDATES_TAB = "candidates";
 
+// الأقسام اللي فيها البند (عشان القيمة القديمة ما تتنسخش لقسم غير محسوم)
+function sectionsOf(id: string): string[] {
+  return AZKAR_SECTIONS.filter((s) => s.itemIds.includes(id)).map((s) => s.id);
+}
+
 export default function AzkarTab({ hidden }: { hidden: boolean }) {
   const [sectionId, setSectionId] = useState<string>(AZKAR_SECTIONS[0].id);
   const showCandidates = CANDIDATES_ENABLED && sectionId === CANDIDATES_TAB;
@@ -95,7 +100,7 @@ function AzkarItem({ itemId, sectionId }: { itemId: string; sectionId: string })
   useEffect(() => {
     if (!approved) return;
     try {
-      setCount(readProgress(localStorage, todayKey(), sectionId, itemId));
+      setCount(readProgress(localStorage, todayKey(), sectionId, itemId, sectionsOf(itemId)));
     } catch {
       setCount(0);
     }
