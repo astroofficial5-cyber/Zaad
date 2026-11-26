@@ -123,6 +123,6 @@ test("alquran.cloud مش موجود في المصادر المعتمدة", () =>
 });
 
 test("السجلات المنقولة لها مراجعات مستقلة", () => {
-  assert.equal(records.length, 25);
-  assert.equal(reviewLog.length, 25);
+  assert.equal(records.length, 28);
+  assert.equal(reviewLog.length, 28);
 });

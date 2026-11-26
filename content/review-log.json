@@ -323,5 +323,44 @@
     },
     "scope": "reviewer-comparison-with-printed-source-and-sunnah",
     "note": "مراجعة يدوية: مقارنة النص والعدد بنص صفحة رسالة الحرمين، والمرجع على sunnah.com. لا تحكم على صحة الحديث. الحقوق: لم تُحسم، والشروط الفعلية للموقع غير مقروءة؛ المراجعة ليست إذنا عاما بالنشر. | قورن النص بنسخة رسالة الحرمين من حصن المسلم وبصفحة الحديث على sunnah.com (أو dorar.net حسب البند) في 25-26/11/2026؛ التنفيذ البرمجي آلي؛ لا مراجعة بشرية مستقلة ولا اعتماد من صاحب المشروع"
+  },
+  {
+    "recordId": "hisn-ms-sayyid-istighfar-v1",
+    "reviewer": "مراجعة المصدر",
+    "reviewedAt": "2026-11-26T04:47:19Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "reviewer-comparison-with-printed-source-and-sunnah",
+    "note": "قورن النص بالمطبوع في حصن المسلم وبصفحة الحديث على sunnah.com في 2026-11-26؛ التنفيذ البرمجي آلي؛ بدون مراجعة بشرية مستقلة وبدون اعتماد من صاحب المشروع"
+  },
+  {
+    "recordId": "hisn-ms-asbahna-2723-v1",
+    "reviewer": "مراجعة المصدر",
+    "reviewedAt": "2026-11-26T04:47:19Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "reviewer-comparison-with-printed-source-and-sunnah",
+    "note": "قورن النص بالمطبوع في حصن المسلم وبصفحة الحديث على sunnah.com في 2026-11-26؛ التنفيذ البرمجي آلي؛ بدون مراجعة بشرية مستقلة وبدون اعتماد من صاحب المشروع"
+  },
+  {
+    "recordId": "hisn-ap-ibnmajah-fajr-925-v1",
+    "reviewer": "مراجعة المصدر",
+    "reviewedAt": "2026-11-26T04:47:19Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "reviewer-comparison-with-printed-source-and-sunnah",
+    "note": "قورن النص بالمطبوع في حصن المسلم وبصفحة الحديث على sunnah.com في 2026-11-26؛ التنفيذ البرمجي آلي؛ بدون مراجعة بشرية مستقلة وبدون اعتماد من صاحب المشروع"
   }
 ]
