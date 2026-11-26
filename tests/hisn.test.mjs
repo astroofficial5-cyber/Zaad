@@ -24,7 +24,7 @@ test('Batch 2 records have an independent review that is not the importer, with 
 });
 test('Printed repetition and continuation boundaries follow book-relative order',()=>{
  const ids=AZKAR_SECTIONS.map(s=>s.itemIds.filter(id=>records.some(r=>r.targetId===id)));
- assert.deepEqual(ids,[['ap-1','ap-2','ap-3','ap-5','ap-4','ap-tasbih-33','ap-ibnmajah-fajr-925','ap-muawwidhat','ap-ayat-kursi'],['ms-ikhlas-3','ms-falaq-3','ms-nas-3','ms-asbahna-2723','m-2','ms-sayyid-1','m-3','m-1','ms-ashhadk-4-m','ms-afini-3','ms-hasbiya-7','ms-afw-1','ms-radeet-3','ms-tahlil-100-sabah','ms-khalqihi-3-m','ms-istighfar-100'],['ms-ikhlas-3','ms-falaq-3','ms-nas-3','e-2','ms-sayyid-1','e-3','e-1','ms-afini-3','ms-hasbiya-7','ms-afw-1','ms-radeet-3','ms-istighfar-100']]);
+ assert.deepEqual(ids,[['ap-1','ap-2','ap-3','ap-5','ap-4','ap-tasbih-33','ap-tahlil-fajr-10','ap-ibnmajah-fajr-925','ap-muawwidhat','ap-ayat-kursi'],['ms-ikhlas-3','ms-falaq-3','ms-nas-3','ms-asbahna-2723','m-2','ms-sayyid-1','m-3','m-1','ms-ashhadk-4-m','ms-afini-3','ms-hasbiya-7','ms-afw-1','ms-radeet-3','ms-tahlil-100-sabah','ms-khalqihi-3-m','ms-istighfar-100'],['ms-ikhlas-3','ms-falaq-3','ms-nas-3','e-amsayna-2723','e-2','ms-sayyid-1','e-3','e-1','ms-afini-3','ms-hasbiya-7','ms-afw-1','ms-radeet-3','ms-istighfar-100']]);
  assert.equal(records.find(r=>r.targetId==='ap-3').count,3);
  assert.equal(records.find(r=>r.targetId==='ap-5').count,1);
  assert.match(records.find(r=>r.targetId==='e-2').countNote,/متن الكتاب/);
