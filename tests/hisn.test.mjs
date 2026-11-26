@@ -9,7 +9,8 @@ import source from '../content/hisn-source-selection.json' with {type:'json'};
 test('Hisn only: the original 11 records still match the reviewed snapshot',()=>{
  assert.equal(records.length,31);
  assert.deepEqual(records.slice(0,11),source.records);
- assert.ok(records.every(r=>r.sourceId==='hisn-risala'));
+ // سجل adab-1202 من مصدر sunnah.com المعتمد بقراءة صاحب المشروع، وباقي السجلات حصن فقط
+ assert.ok(records.filter(r=>r.targetId!=='adab-1202').every(r=>r.sourceId==='hisn-risala'));
  assert.ok(records.slice(0,11).every(r=>reviews.some(v=>v.recordId===r.id&&v.scope==='private-local-review-only')));
 });
 test('Batch 2 records have an independent review that is not the importer, with all checks true',()=>{
