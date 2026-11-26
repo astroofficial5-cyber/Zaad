@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { PRAYER_KEYS, PRAYER_NAMES, applyOffsets, formatCountdown, formatMinutes, hijriLabel } from "../lib/time.js";
+import { PRAYER_KEYS, PRAYER_NAMES, applyOffsets, currentPrayerKey, formatCountdown, formatMinutes, hijriLabel, parseTimeToMinutes } from "../lib/time.js";
 import { fetchPrayerData } from "../lib/prayerApi.js";
 import { savePlace } from "../lib/settings.js";
 import { CITIES, placeFromCity, validatePlace } from "../lib/places.js";
@@ -167,11 +167,8 @@ export default function PrayerTab({
   const nowMin = nowParts ? nowParts.hh * 60 + nowParts.mm : null;
   const todayMarks: Record<string, string> = {};
   if (todayMinutes && nowMin !== null) {
-    let last: string | null = null;
-    for (const k of PRAYER_KEYS) {
-      const m = todayMinutes[k];
-      if (m !== null && m !== undefined && m <= nowMin) last = k;
-    }
+    const sunriseMin = today.status === "ok" ? parseTimeToMinutes(today.data.timings?.Sunrise) : NaN;
+    const last = currentPrayerKey(todayMinutes, nowMin, sunriseMin);
     if (last) todayMarks[last] = "الحالية";
     if (next && todayMinutes[next.key] !== null && todayMinutes[next.key] !== undefined && todayMinutes[next.key] > nowMin) {
       todayMarks[next.key] = "القادمة";

@@ -57,7 +57,7 @@ test("hijriLabel بيكوّن التاريخ الهجري", () => {
 
 test("formatCountdown", () => {
   assert.equal(t.formatCountdown(45 * 60000), "45 دقيقة");
-  assert.equal(t.formatCountdown((2 * 60 + 5) * 60000), "2 ساعة و5 دقيقة");
+  assert.equal(t.formatCountdown((2 * 60 + 5) * 60000), "2 ساعتان و 5 دقائق");
 });
 
 test("stripDiacritics بيشيل الحركات", () => {
