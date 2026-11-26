@@ -48,5 +48,5 @@ test("مصدر حصن المسلم متحقق وحقوق النشر العام �
 
 test("ثمانية سجلات لأذكار ما بعد الصلاة منقولة ومراجعة", () => {
   const afterPrayer = records.filter((r) => r.targetId && r.targetId.startsWith("ap-"));
-  assert.equal(afterPrayer.length, 9);
+  assert.equal(afterPrayer.length, 10);
 });

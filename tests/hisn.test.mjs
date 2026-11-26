@@ -7,7 +7,7 @@ import reviews from '../content/review-log.json' with {type:'json'};
 import source from '../content/hisn-source-selection.json' with {type:'json'};
 
 test('Hisn only: the original 11 records still match the reviewed snapshot',()=>{
- assert.equal(records.length,28);
+ assert.equal(records.length,30);
  assert.deepEqual(records.slice(0,11),source.records);
  assert.ok(records.every(r=>r.sourceId==='hisn-risala'));
  assert.ok(records.slice(0,11).every(r=>reviews.some(v=>v.recordId===r.id&&v.scope==='private-local-review-only')));

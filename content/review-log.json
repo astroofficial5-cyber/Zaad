@@ -390,5 +390,33 @@
     "scope": "reviewer-comparison-with-printed-source-and-sunnah",
     "note": "قورن النص بالمطبوع في حصن المسلم وبصفحة الحديث على sunnah.com في 2026-11-26؛ التنفيذ البرمجي آلي؛ بدون مراجعة بشرية مستقلة وبدون اعتماد من صاحب المشروع",
     "rightsNote": "فحص المصدر والنص تم؛ لا يوجد ترخيص نشر من الجهة المالكة للطبعة، وحقوق النشر العام غير محسومة."
+  },
+  {
+    "recordId": "hisn-e-amsayna-2723-v1",
+    "reviewer": "مراجعة المصدر",
+    "reviewedAt": "2026-11-26T05:29:59Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "reviewer-comparison-with-printed-source-and-sunnah",
+    "note": "قورن النص المطبوع بصفحة sunnah.com مقطعًا مقطعًا بعد حذف التشكيل؛ التنفيذ البرمجي آلي؛ بدون مراجعة بشرية مستقلة وبدون اعتماد من صاحب المشروع",
+    "rightsNote": "فحص المصدر والنص تم؛ لا يوجد ترخيص نشر من الجهة المالكة للطبعة، وحقوق النشر العام غير محسومة."
+  },
+  {
+    "recordId": "hisn-ap-tahlil-fajr-10-v1",
+    "reviewer": "مراجعة المصدر",
+    "reviewedAt": "2026-11-26T05:29:59Z",
+    "checks": {
+      "textMatchesOriginal": true,
+      "referenceConfirmed": true,
+      "sourceUrlOpened": true,
+      "rightsReviewed": true
+    },
+    "scope": "reviewer-comparison-with-printed-source-and-sunnah",
+    "note": "قورن النص المطبوع بصفحة sunnah.com مقطعًا مقطعًا بعد حذف التشكيل؛ التنفيذ البرمجي آلي؛ بدون مراجعة بشرية مستقلة وبدون اعتماد من صاحب المشروع",
+    "rightsNote": "فحص المصدر والنص تم؛ لا يوجد ترخيص نشر من الجهة المالكة للطبعة، وحقوق النشر العام غير محسومة."
   }
 ]
