@@ -203,35 +203,31 @@ export default function PrayerTab({
 
   return (
     <section hidden={hidden} aria-label="مواقيت الصلاة">
-      <div className="card">
-        <div className="place-line">
-          <strong>{place.name}</strong>
-          <button className="ghost" onClick={() => setEditing(true)}>
-            تغيير المكان
-          </button>
+      <div className="head-line">
+        <div>
+          <strong className="head-place">{place.name}</strong>
+          {todayDate && (
+            <p className="muted head-date">
+              {new Date(now).toLocaleDateString("ar-EG-u-nu-latn", {
+                timeZone: tz!,
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
+              {todayDate.hijri ? ` — ${hijriLabel(todayDate.hijri)}` : ""}
+            </p>
+          )}
         </div>
-        <p className="muted" style={{ margin: "4px 0 0" }}>
-          منطقة المكان: <span dir="ltr">{tz}</span>
-        </p>
-        {tzDiffers && (
-          <p className="warn" style={{ margin: "4px 0 0" }}>
-            المواقيت محسوبة بتوقيت المكان المختار ({tz})، مش توقيت جهازك ({devTz}).
-          </p>
-        )}
-        {todayDate && (
-          <p className="muted" style={{ margin: "6px 0 0" }}>
-            {new Date(now).toLocaleDateString("ar-EG", {
-              timeZone: tz!,
-              weekday: "long",
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })}
-            {todayDate.hijri ? ` — ${hijriLabel(todayDate.hijri)}` : ""}
-          </p>
-        )}
-        {today.status === "ok" && <p className="muted" style={{ margin: "4px 0 0" }}>{sourceLabel(today)}</p>}
+        <button className="link-btn" onClick={() => setEditing(true)}>
+          تغيير المكان
+        </button>
       </div>
+      {tzDiffers && (
+        <p className="warn" style={{ margin: "0 0 8px" }}>
+          المواقيت محسوبة بتوقيت المكان المختار ({tz})، مش توقيت جهازك ({devTz}).
+        </p>
+      )}
 
       {settings.notifications && (
         <p className="muted" style={{ margin: "0 0 12px" }}>
@@ -241,17 +237,19 @@ export default function PrayerTab({
 
       {view === "today" ? (
         <>
+          <DayCard
+            title="مواقيت اليوم"
+            state={today}
+            minutes={todayMinutes}
+            sunrise={today.status === "ok" ? sunriseText(today.data.timings) : null}
+            marks={todayMarks}
+            onRetry={() => setRetry((n) => n + 1)}
+          />
+
           {next ? (
-            <div className="card hero">
-              <p style={{ margin: 0 }}>الصلاة القادمة</p>
-              <p className="hero-name">{(PRAYER_NAMES as any)[next.key]}</p>
-              <p className="hero-time" dir="ltr">
-                {(() => {
-                  const c = civilIn(tz!, next.at);
-                  return formatMinutes(c.hh * 60 + c.mm);
-                })()}
-              </p>
-              <p className="hero-count">باقي {formatCountdown(next.at - now)}</p>
+            <div className="card countdown-card">
+              <p className="countdown-label">الوقت المتبقي لصلاة {(PRAYER_NAMES as any)[next.key]}</p>
+              <p className="countdown-value">{formatCountdown(next.at - now)}</p>
             </div>
           ) : today.status === "loading" ? (
             <div className="card">
@@ -263,29 +261,16 @@ export default function PrayerTab({
             </div>
           )}
 
-          <DayCard
-            title="مواقيت اليوم"
-            state={today}
-            minutes={todayMinutes}
-            sunrise={today.status === "ok" ? sunriseText(today.data.timings) : null}
-            marks={todayMarks}
-            onRetry={() => setRetry((n) => n + 1)}
-          />
-
-          {onNavigate && (
-            <div className="quick-grid" role="group" aria-label="أقسام التطبيق">
-              {QUICK.map((q) => (
-                <button key={q.id} type="button" className="quick-tile" onClick={() => onNavigate(q.id)}>
-                  <span className="quick-icon" aria-hidden="true">{q.icon}</span>
-                  <span>{q.label}</span>
-                </button>
-              ))}
-            </div>
-          )}
-
           <button type="button" className="ghost full" onClick={() => setView("days")}>
             مواقيت الأيام القادمة ‹
           </button>
+          <details className="source-note small-info">
+            <summary>تفاصيل المواقيت</summary>
+            <p className="muted" style={{ margin: "6px 0 0" }}>
+              منطقة المكان: <span dir="ltr">{tz}</span>
+            </p>
+            {today.status === "ok" && <p className="muted" style={{ margin: "4px 0 0" }}>{sourceLabel(today)}</p>}
+          </details>
         </>
       ) : (
         <>

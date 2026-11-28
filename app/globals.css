@@ -1,7 +1,24 @@
-/* الوضع الغامق هو الافتراضي. الفاتح يتفعّل فقط بـ data-theme="light". */
+/* الوضع الفاتح هو الافتراضي. الغامق بإعداد الجهاز (تلقائي) أو باختيار data-theme="dark". */
 :root {
+  --bg: #eff1f4;
+  --card: #fffaf8;
+  --text: #20242a;
+  --muted: #6b717b;
+  --accent: #ef6a62;
+  --accent-text: #ffffff;
+  --border: #f3dfd9;
+  --warn: #8a5a00;
+  --warn-bg: #fff6e0;
+  --error: #b00020;
+  --accent-ink: #d2493f;
+  --accent-soft: rgba(239, 106, 98, 0.12);
+  --shadow: 0 1px 2px rgba(60, 30, 25, 0.05);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
   --bg: #121412;
-  --card: #1d211e;
+  --card: #1c201d;
   --text: #eef1ee;
   --muted: #a9b1aa;
   --accent: #2f8f63;
@@ -12,23 +29,27 @@
   --error: #ff8a8a;
   --accent-ink: #6fcf9c;
   --accent-soft: rgba(47, 143, 99, 0.18);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   color-scheme: dark;
 }
 
-:root[data-theme="light"] {
-  --bg: #f7f7f5;
-  --card: #ffffff;
-  --text: #1a1a1a;
-  --muted: #5b5b5b;
-  --accent: #0f5132;
-  --accent-text: #ffffff;
-  --border: #e3e3df;
-  --warn: #8a5a00;
-  --warn-bg: #fff6e0;
-  --error: #b00020;
-  --accent-ink: #0f5132;
-  --accent-soft: rgba(15, 81, 50, 0.10);
-  color-scheme: light;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121412;
+    --card: #1c201d;
+    --text: #eef1ee;
+    --muted: #a9b1aa;
+    --accent: #2f8f63;
+    --accent-text: #ffffff;
+    --border: #2d332f;
+    --warn: #f0b35a;
+    --warn-bg: #2a2416;
+    --error: #ff8a8a;
+    --accent-ink: #6fcf9c;
+    --accent-soft: rgba(47, 143, 99, 0.18);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color-scheme: dark;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -352,3 +373,128 @@ button.full { width: 100%; margin: 8px 0; }
 .prayer-name { min-width: 0; flex-wrap: nowrap; white-space: nowrap; }
 .prayer-time { white-space: nowrap; flex-shrink: 0; }
 .badge { white-space: nowrap; flex-shrink: 0; }
+
+
+/* ===== تنظيف شامل: بطاقات هادئة بلا حدود ثقيلة، لون واحد، مسافات أوسع ===== */
+.app { padding-top: 6px; }
+.brand { padding: 10px 2px 6px; }
+.brand h1 { font-size: 22px; letter-spacing: 0; }
+.brand-mark { border-radius: 14px; }
+.card {
+  border: 0;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin-bottom: 14px;
+}
+.hero {
+  background: linear-gradient(160deg, var(--accent) 0%, #176243 100%);
+  color: var(--accent-text);
+  border-radius: 22px;
+  padding: 26px 16px;
+}
+:root[data-theme="dark"] .hero { background: linear-gradient(160deg, #2f8f63 0%, #226a4a 100%); }
+.hero .hero-time { font-size: 52px; }
+.row { border-bottom: 1px solid var(--border); }
+.nav { background: var(--card); }
+@media (max-width: 720px) {
+  .nav { box-shadow: 0 -2px 14px rgba(20, 30, 25, 0.08); border-top: 0; }
+  .tab { font-size: 13px; font-weight: 600; }
+}
+button.ghost, button.quran-tool, .search-input, select, input[type="number"], input[type="text"], input:not([type]) {
+  border-color: var(--border);
+}
+button.ghost { border-radius: 14px; background: var(--card); box-shadow: var(--shadow); border: 0; }
+button.primary { border-radius: 14px; box-shadow: none; }
+.list-row { border: 0; border-radius: 16px; box-shadow: var(--shadow); margin-bottom: 10px; }
+
+/* رأس الصلاة المختصر */
+.head-line { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin: 4px 2px 14px; }
+.head-place { font-size: 20px; }
+.head-date { margin: 2px 0 0; font-size: 14px; }
+.link-btn {
+  border: 0; background: transparent; color: var(--accent-ink); font: inherit; font-size: 14px; font-weight: 600;
+  cursor: pointer; padding: 6px 4px; min-height: 36px; white-space: nowrap;
+}
+.reset-btn { display: block; margin: 0 auto; color: var(--muted); font-weight: 400; font-size: 13px; }
+
+/* صفوف المواقيت */
+.prayer-row { border-radius: 0; min-height: 50px; }
+.prayer-row.is-next { border-radius: 12px; border-bottom-color: transparent; }
+.prayer-row.is-next { background: var(--accent-soft); }
+.prayer-row.is-next .prayer-name, .prayer-row.is-next .prayer-time { color: var(--accent-ink); }
+.badge-next { border-radius: 999px; }
+.day-card h2 { font-size: 16px; color: var(--muted); font-weight: 600; margin-bottom: 6px; }
+
+/* الأذكار: نص الذكر أولاً، والمصدر مطوي */
+.ayah-text { margin-bottom: 14px; }
+.counter-row { margin-top: 4px; }
+.source-note { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 8px; }
+.source-note > summary { list-style: none; display: flex; justify-content: space-between; align-items: center; min-height: 32px; }
+.source-note > summary::-webkit-details-marker { display: none; }
+.source-note > summary::after { content: "＋"; color: var(--muted); }
+.source-note[open] > summary::after { content: "−"; }
+.source-note p { margin: 6px 0 0; }
+.small-info { border-top: 0; margin: 8px 2px; }
+
+
+/* ===== قريب من تطبيقات المواقيت الخفيفة: صفوف بطاقات منفصلة، والصلاة القادمة صف كامل ملوّن ===== */
+.day-card { background: transparent; box-shadow: none; padding: 0; margin-bottom: 8px; }
+.day-card h2 { margin: 4px 4px 8px; }
+.day-card .prayer-row, .day-card .sunrise-row {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 8px;
+  padding: 0 18px;
+  min-height: 54px;
+  box-shadow: none;
+}
+.day-card .sunrise-row { min-height: 50px; }
+.day-card .prayer-name { font-size: 17px; font-weight: 600; }
+.day-card .prayer-time { font-size: 19px; font-weight: 700; }
+.day-card .prayer-row.is-next {
+  background: linear-gradient(90deg, #ef6a62 0%, #f58a78 100%);
+  border-color: transparent;
+  border-radius: 16px;
+}
+.day-card .prayer-row.is-next .prayer-name, .day-card .prayer-row.is-next .prayer-time { color: #fff; }
+.day-card .prayer-row.is-next .badge-next { background: rgba(255,255,255,0.25); color: #fff; }
+.day-card .prayer-row.is-current { opacity: 1; }
+.day-card .row:last-child { border-bottom: 1px solid var(--border); }
+.day-card .prayer-row.is-next:last-child { border-bottom-color: transparent; }
+
+.countdown-card { text-align: center; padding: 16px; }
+.countdown-label { margin: 0 0 6px; color: var(--muted); font-size: 15px; }
+.countdown-value { margin: 0; color: var(--accent-ink); font-size: 24px; font-weight: 700; line-height: 1.4; }
+
+/* الواجهة العامة */
+.card { background: var(--card); border: 1px solid var(--border); box-shadow: none; border-radius: 16px; }
+button.primary { background: linear-gradient(90deg, #ef6a62, #f58a78); border: 0; }
+button.ghost { background: var(--card); border: 1px solid var(--border); box-shadow: none; }
+.list-row { border: 1px solid var(--border); box-shadow: none; }
+.list-num { background: linear-gradient(135deg, #ef6a62, #f58a78); color: #fff; border-radius: 12px; }
+.brand-mark { background: linear-gradient(135deg, #ef6a62, #f58a78); }
+.brand-mark svg circle:last-child { fill: var(--card); }
+.nav { background: var(--card); }
+.tab.active { background: var(--accent-soft); color: var(--accent-ink); }
+.quick-icon svg { stroke: var(--accent-ink); }
+:root[data-theme="dark"] .day-card .prayer-row, :root[data-theme="dark"] .day-card .sunrise-row { background: var(--card); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15171a;
+    --card: #1e2125;
+    --border: #2c2f35;
+    --accent: #ef6a62;
+    --accent-ink: #ff8d84;
+    --accent-soft: rgba(239, 106, 98, 0.18);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15171a;
+  --card: #1e2125;
+  --border: #2c2f35;
+  --accent: #ef6a62;
+  --accent-ink: #ff8d84;
+  --accent-soft: rgba(239, 106, 98, 0.18);
+}

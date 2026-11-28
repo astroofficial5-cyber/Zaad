@@ -1,13 +1,14 @@
-// مراجعة التصميم: الوضع الغامق افتراضياً، أهداف لمس 44 بكسل، تركيز واضح، وهامش 16 بكسل على الموبايل.
+// مراجعة التصميم: الوضع الفاتح افتراضياً والغامق بإعداد الجهاز، أهداف لمس 44 بكسل، تركيز واضح، وهامش 16 بكسل على الموبايل.
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
 
-test("الغامق هو الافتراضي والفاتح بالاختيار فقط", () => {
-  assert.match(css, /:root \{[^}]*--bg: #121412/);
-  assert.match(css, /:root\[data-theme="light"\] \{[^}]*--bg: #f7f7f5/);
+test("الفاتح هو الافتراضي والغامق بإعداد الجهاز أو بالاختيار", () => {
+  assert.match(css, /:root \{[^}]*--bg: #eff1f4/);
+  assert.match(css, /:root\[data-theme="dark"\] \{[^}]*--bg: #121412/);
+  assert.match(css, /prefers-color-scheme: dark\) \{\s*:root:not\(\[data-theme="light"\]\)/);
 });
 
 test("أهداف اللمس بحد أدنى 44 بكسل", () => {

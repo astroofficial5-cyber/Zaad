@@ -120,9 +120,6 @@ export default function Home() {
         </div>
         <div>
           <h1>زاد</h1>
-          <p className="muted" style={{ margin: 0 }}>
-            مواقيت الصلاة حسب مكانك، والأذكار، والمصحف للقراءة، والقبلة.
-          </p>
         </div>
       </header>
 

@@ -8,7 +8,7 @@ import AzkarCandidates, { CANDIDATES_ENABLED, CANDIDATES_TAB_LABEL } from "./Azk
 
 // أرقام عربية عشان العدّاد يتقري صح في الاتجاه العربي
 function toArDigits(n: number): string {
-  return String(n).replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[Number(d)]);
+  return String(n);
 }
 
 // العدّاد بيتخزن لكل يوم، وبيشتغل بس على نص معتمد
@@ -160,6 +160,48 @@ function AzkarItem({ itemId, sectionId }: { itemId: string; sectionId: string })
   return (
     <div className="card">
       <p className="ayah-text">{state.text}</p>
+      <div className="counter-row" style={{ flexDirection: "column", gap: 8 }}>
+        {noCount ? (
+          <button
+            className="primary"
+            onClick={bump}
+            aria-pressed={count >= 1}
+            style={{ width: "100%", minHeight: 64, fontSize: "1.25rem", fontWeight: 700 }}
+          >
+            {count >= 1 ? "✓ تمت القراءة" : "تمت القراءة"}
+          </button>
+        ) : (
+        <button
+          className="primary"
+          onClick={bump}
+          disabled={count >= state.count}
+          aria-label={count >= state.count ? `تم الذكر، ${count} من ${state.count}` : `عدّ، أتممت ${count} من ${state.count}`}
+          style={{ width: "100%", minHeight: 64, fontSize: "1.25rem", fontWeight: 700 }}
+        >
+          {count >= state.count
+            ? `✓ تم الذكر ${toArDigits(state.count)} مرة`
+            : `أتممت ${toArDigits(count)} من ${toArDigits(state.count)}`}
+          {count < state.count && (
+            <span style={{ display: "block", fontSize: "0.9rem", fontWeight: 400, opacity: 0.85, marginTop: 4 }}>
+              اضغط للعدّ
+            </span>
+          )}
+        </button>
+        )}
+        <button
+          className="link-btn reset-btn"
+          onPointerDown={startLongPress}
+          onPointerUp={cancelLongPress}
+          onPointerLeave={cancelLongPress}
+          onPointerCancel={cancelLongPress}
+          onClick={() => setResetHint(true)}
+          style={{ minHeight: 40 }}
+        >
+          {resetHint ? "اضغط مطولاً لثانية للتصفير" : "إعادة (اضغط مطولاً)"}
+        </button>
+      </div>
+      <details className="source-note">
+        <summary>المصدر والتفاصيل</summary>
       <p className="muted">{state.countNote}</p>
       {state.primaryNote && <p className="muted">{state.primaryNote}</p>}
       {itemId === "ap-1" && <p className="muted">لفظ الاستغفار مبيَّن في شرح الأوزاعي داخل الرواية.</p>}
@@ -175,46 +217,7 @@ function AzkarItem({ itemId, sectionId }: { itemId: string; sectionId: string })
           </>
         )}
       </p>
-      <div className="counter-row" style={{ flexDirection: "column", gap: 8 }}>
-        {noCount ? (
-          <button
-            className="primary"
-            onClick={bump}
-            aria-pressed={count >= 1}
-            style={{ width: "100%", minHeight: 96, fontSize: "1.5rem", fontWeight: 700 }}
-          >
-            {count >= 1 ? "✓ تمت القراءة" : "تمت القراءة"}
-          </button>
-        ) : (
-        <button
-          className="primary"
-          onClick={bump}
-          disabled={count >= state.count}
-          aria-label={count >= state.count ? `تم الذكر، ${count} من ${state.count}` : `عدّ، أتممت ${count} من ${state.count}`}
-          style={{ width: "100%", minHeight: 96, fontSize: "1.5rem", fontWeight: 700 }}
-        >
-          {count >= state.count
-            ? `✓ تم الذكر ${toArDigits(state.count)} مرة`
-            : `أتممت ${toArDigits(count)} من ${toArDigits(state.count)}`}
-          {count < state.count && (
-            <span style={{ display: "block", fontSize: "0.9rem", fontWeight: 400, opacity: 0.85, marginTop: 4 }}>
-              اضغط للعدّ
-            </span>
-          )}
-        </button>
-        )}
-        <button
-          className="ghost"
-          onPointerDown={startLongPress}
-          onPointerUp={cancelLongPress}
-          onPointerLeave={cancelLongPress}
-          onPointerCancel={cancelLongPress}
-          onClick={() => setResetHint(true)}
-          style={{ width: "100%", minHeight: 44 }}
-        >
-          {resetHint ? "اضغط مطولاً لثانية للتصفير" : "إعادة (اضغط مطولاً)"}
-        </button>
-      </div>
+      </details>
     </div>
   );
 }

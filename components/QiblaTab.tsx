@@ -121,7 +121,7 @@ export default function QiblaTab({
           <div
             aria-label={`السهم يشير إلى ${state.direction.toFixed(1)} درجة من الشمال`}
             style={{
-              fontSize: 72,
+              fontSize: 72, color: "var(--accent)",
               transform: `rotate(${compassOn && heading !== null ? state.direction - heading : state.direction}deg)`,
               transition: "transform .3s",
             }}
